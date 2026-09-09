@@ -2,7 +2,7 @@
 <html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.5, user-scalable=yes">
     <title>Dar Al-Karama | Istanbul & Antalya — Premium Estates</title>
     <meta name="description" content="Premium real estate in Istanbul and Antalya. Quality villas, marinas and investment land with official Turkish government partnership. Full legal transparency and VIP concierge.">
     <link rel="canonical" href="https://www.daralkarama.com/">
@@ -156,6 +156,7 @@
             width: 30px;
             height: 30px;
             flex-shrink: 0;
+            transition: 0.3s ease;
         }
         .brand-name {
             font-family: var(--font-caps);
@@ -163,6 +164,7 @@
             font-size: 1rem;
             color: var(--ivory);
             line-height: 1.2;
+            transition: 0.3s ease;
         }
         .brand-name .ar {
             font-family: var(--font-arabic);
@@ -170,6 +172,7 @@
             color: var(--gold-pure);
             font-size: 1.2rem;
             display: block;
+            transition: 0.3s ease;
         }
         .brand-name .sub {
             font-size: 0.6rem;
@@ -177,6 +180,7 @@
             color: var(--sand);
             display: block;
             margin-top: 2px;
+            transition: 0.3s ease;
         }
 
         .main-nav {
@@ -223,6 +227,7 @@
             gap: 4px;
             font-size: 0.78rem;
             color: var(--sand);
+            align-items: center;
         }
         .lang-switch button {
             padding: 4px 8px;
@@ -323,6 +328,29 @@
             inset-inline-end: 30px;
             font-size: 2.4rem;
             color: var(--gold-pure);
+        }
+        .mobile-nav-overlay .lang-switch-mobile {
+            display: flex;
+            gap: 16px;
+            margin-top: 24px;
+            padding-top: 24px;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        .mobile-nav-overlay .lang-switch-mobile button {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--sand);
+            padding: 8px 12px;
+            border-radius: 6px;
+            transition: 0.3s;
+        }
+        .mobile-nav-overlay .lang-switch-mobile button.active {
+            color: var(--gold-pure);
+            background: rgba(212, 175, 55, 0.15);
+        }
+        .mobile-nav-overlay .lang-switch-mobile span {
+            color: rgba(255, 255, 255, 0.2);
+            font-size: 1.2rem;
         }
 
         /* ============================================================
@@ -649,7 +677,7 @@
         }
 
         /* ============================================================
-                   WHY TURKEY – (Vatandaşlık vurgusu yok, şeffaflık ve güven)
+                   WHY TURKEY
                    ============================================================ */
         .why-turkey {
             background: var(--emerald);
@@ -923,7 +951,7 @@
         }
 
         /* ============================================================
-                   TRUST – Güven, şeffaflık odaklı (fiyat yok)
+                   TRUST
                    ============================================================ */
         .trust {
             background: var(--matte-black);
@@ -1398,8 +1426,10 @@
         }
 
         /* ============================================================
-                   RESPONSIVE
+                   RESPONSIVE – TÜM CİHAZLAR
                    ============================================================ */
+
+        /* === TABLET VE KÜÇÜK EKRANLAR (1024px ve altı) === */
         @media (max-width: 1024px) {
             .property-grid {
                 grid-template-columns: repeat(2, 1fr);
@@ -1430,20 +1460,46 @@
             .about-image {
                 order: -1;
             }
+
+            /* BAŞLIK KÜÇÜLTME (Tablet) */
+            .brand-name {
+                font-size: 0.85rem;
+            }
+            .brand-name .ar {
+                font-size: 1.05rem;
+            }
+            .brand svg {
+                width: 24px;
+                height: 24px;
+            }
+            .brand {
+                gap: 8px;
+            }
         }
 
+        /* === TELEFON (780px ve altı) === */
         @media (max-width: 780px) {
-            .main-nav ul,
-            .lang-switch {
+            .main-nav ul {
                 display: none;
             }
+            /* DİL DESTEĞİ GÖZÜKÜYOR – SAKLANMIYOR */
+            .lang-switch {
+                display: flex;
+                font-size: 0.65rem;
+                gap: 2px;
+            }
+            .lang-switch button {
+                padding: 2px 5px;
+            }
+
             .mobile-toggle {
                 display: block;
             }
             .header-actions .btn-gold {
-                padding: 8px 16px;
-                font-size: 0.75rem;
+                padding: 6px 12px;
+                font-size: 0.65rem;
             }
+
             .hero-stats {
                 gap: 28px;
             }
@@ -1482,8 +1538,38 @@
                 flex: 1 1 100%;
                 max-width: 100%;
             }
+
+            /* BAŞLIK KÜÇÜLTME (Telefon) */
+            .brand-name {
+                font-size: 0.65rem;
+                letter-spacing: 0.02em;
+            }
+            .brand-name .ar {
+                font-size: 0.85rem;
+            }
+            .brand-name .sub {
+                font-size: 0.4rem;
+                letter-spacing: 0.1em;
+            }
+            .brand svg {
+                width: 18px;
+                height: 18px;
+            }
+            .brand {
+                gap: 6px;
+            }
+            .header-inner {
+                height: 70px;
+            }
+            .site-header {
+                height: 70px;
+            }
+            :root {
+                --header-height: 70px;
+            }
         }
 
+        /* === ÇOK KÜÇÜK TELEFON (480px ve altı) === */
         @media (max-width: 480px) {
             .container {
                 padding: 0 16px;
@@ -1502,6 +1588,23 @@
             }
             .currency-select {
                 width: 100%;
+            }
+            .brand-name {
+                font-size: 0.55rem;
+            }
+            .brand-name .ar {
+                font-size: 0.75rem;
+            }
+            .brand svg {
+                width: 16px;
+                height: 16px;
+            }
+            .header-actions .btn-gold {
+                padding: 4px 8px;
+                font-size: 0.55rem;
+            }
+            .lang-switch {
+                font-size: 0.55rem;
             }
         }
     </style>
@@ -1556,6 +1659,14 @@
         <a href="#trust" data-i18n="nav4">الاستثمار</a>
         <a href="#footer" data-i18n="nav5">تواصل</a>
         <a href="#contact" class="btn-gold" style="margin-top:10px;" data-i18n="navCta">جولة VIP</a>
+        <!-- Mobil menü içinde dil desteği -->
+        <div class="lang-switch-mobile">
+            <button class="active" data-lang="ar">AR</button>
+            <span>|</span>
+            <button data-lang="en">EN</button>
+            <span>|</span>
+            <button data-lang="tr">TR</button>
+        </div>
     </div>
 
     <!-- ============ HERO ============ -->
@@ -1796,7 +1907,6 @@
                 <p class="section-title-en" data-i18n="testSub">Families who trusted Dar Al-Karama with their new home</p>
             </div>
             <div class="test-grid">
-                <!-- 1 -->
                 <div class="test-card reveal">
                     <span class="test-quote-mark">&rdquo;</span>
                     <p data-i18n="test1">منذ اللحظة الأولى شعرنا أننا في بيتنا. الفيلا في بيبك تفوق كل توقعاتنا، والفريق تعامل معنا بخصوصية واحترام تام.</p>
@@ -1805,7 +1915,6 @@
                         <div><b data-i18n="test1name">عائلة الفلاسي</b><span class="flag">🇦🇪 <span data-i18n="test1loc">دبي، الإمارات</span></span></div>
                     </div>
                 </div>
-                <!-- 2 -->
                 <div class="test-card reveal">
                     <span class="test-quote-mark">&rdquo;</span>
                     <p data-i18n="test2">إجراءات الملكية تمّت بسلاسة تامة، وخدمة الكونسيرج أرسلت لنا سيارة ومترجم من أول يوم وصلنا فيه إسطنبول.</p>
@@ -1814,7 +1923,6 @@
                         <div><b data-i18n="test2name">الأستاذ خالد العتيبي</b><span class="flag">🇸🇦 <span data-i18n="test2loc">الرياض، السعودية</span></span></div>
                     </div>
                 </div>
-                <!-- 3 -->
                 <div class="test-card reveal">
                     <span class="test-quote-mark">&rdquo;</span>
                     <p data-i18n="test3">المجلس المنفصل والحديقة الخاصة كانا بالضبط ما تبحث عنه عائلتنا. فيلا أنطاليا أصبحت وجهتنا الصيفية كل عام.</p>
@@ -1823,7 +1931,6 @@
                         <div><b data-i18n="test3name">عائلة الصباح</b><span class="flag">🇰🇼 <span data-i18n="test3loc">الكويت</span></span></div>
                     </div>
                 </div>
-                <!-- 4 -->
                 <div class="test-card reveal">
                     <span class="test-quote-mark">&rdquo;</span>
                     <p data-i18n="test4">مارينا الخليج الذهبي في إسطنبول هي تحفة حقيقية. الخدمات التي تلقيناها جعلتنا نشعر بأننا ملوك، بالتأكيد سنكرر التجربة.</p>
@@ -1832,7 +1939,6 @@
                         <div><b data-i18n="test4name">السيد حمد آل ثاني</b><span class="flag">🇶🇦 <span data-i18n="test4loc">الدوحة، قطر</span></span></div>
                     </div>
                 </div>
-                <!-- 5 -->
                 <div class="test-card reveal">
                     <span class="test-quote-mark">&rdquo;</span>
                     <p data-i18n="test5">على الرغم من أنني اشتريت أرضاً استثمارية، إلا أن وكالتكم جعلتني أشعر بأني اشتريت قصراً. الشفافية والتوجيه القانوني كانا ممتازين.</p>
@@ -1910,7 +2016,7 @@
 
     <script>
         // ============================================================
-        // 1. TRANSLATIONS – (Fiyat ve vatandaşlık vurgusu kaldırıldı)
+        // 1. TRANSLATIONS
         // ============================================================
         const translations = {
             ar: {
@@ -2369,10 +2475,14 @@
             });
         }
 
-        document.querySelectorAll('.lang-switch button').forEach(btn => {
+        // Dil değiştirme (header + mobil overlay)
+        document.querySelectorAll('.lang-switch button, .lang-switch-mobile button').forEach(btn => {
             btn.addEventListener('click', () => {
-                document.querySelectorAll('.lang-switch button').forEach(b => b.classList.remove('active'));
+                // Tüm dil butonlarından aktif sınıfını kaldır
+                document.querySelectorAll('.lang-switch button, .lang-switch-mobile button').forEach(b => b.classList
+                    .remove('active'));
                 btn.classList.add('active');
+
                 currentLang = btn.dataset.lang;
                 if (currentLang === 'ar') {
                     document.documentElement.setAttribute('dir', 'rtl');
