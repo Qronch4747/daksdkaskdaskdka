@@ -1,0 +1,2589 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dar Al-Karama | Istanbul & Antalya — Premium Estates</title>
+    <meta name="description" content="Premium real estate in Istanbul and Antalya. Quality villas, marinas and investment land with official Turkish government partnership. Full legal transparency and VIP concierge.">
+    <link rel="canonical" href="https://www.daralkarama.com/">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Dar Al-Karama — Premium Estates in Istanbul & Antalya">
+    <meta property="og:description" content="Official partner of the Turkish government. Quality properties with full legal support and VIP service.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1613977257363-707ba9348227?q=80&w=1200&auto=format&fit=crop">
+    <meta property="og:type" content="website">
+
+    <!-- JSON-LD -->
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "RealEstateAgent",
+            "name": "Dar Al-Karama Real Estate",
+            "url": "https://www.daralkarama.com/",
+            "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Istanbul",
+                "addressCountry": "Turkey"
+            }
+        }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=Cinzel:wght@500;600&family=Cairo:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        /* ============================================================
+                   ROOT & RESET
+                   ============================================================ */
+        :root {
+            --gold: #C9A96E;
+            --gold-pure: #D4AF37;
+            --burgundy: #722F37;
+            --emerald: #005B4C;
+            --ivory: #FFF8E7;
+            --matte-black: #1A120B;
+            --sand: #E8D5B7;
+            --white: #FFFFFF;
+            --sapphire: #0F1B33;
+            --font-display: 'Playfair Display', serif;
+            --font-caps: 'Cinzel', serif;
+            --font-arabic: 'Cairo', sans-serif;
+            --container: 1240px;
+            --header-height: 84px;
+            --transition: 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            background: var(--ivory);
+            color: var(--matte-black);
+            font-family: var(--font-arabic);
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+        img {
+            max-width: 100%;
+            display: block;
+        }
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+        ul {
+            list-style: none;
+        }
+        button {
+            font-family: inherit;
+            cursor: pointer;
+            border: none;
+            background: none;
+        }
+        .container {
+            max-width: var(--container);
+            margin: 0 auto;
+            padding: 0 28px;
+        }
+
+        /* ============================================================
+                   SCROLL BAR
+                   ============================================================ */
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--matte-black);
+        }
+        ::-webkit-scrollbar-thumb {
+            background: var(--gold-pure);
+            border-radius: 10px;
+        }
+
+        /* ============================================================
+                   ARABESQUE PATTERN
+                   ============================================================ */
+        .arabesque-bg {
+            position: absolute;
+            inset: 0;
+            pointer-events: none;
+            opacity: 0.06;
+            background-image:
+                radial-gradient(circle at 50% 50%, transparent 0 8px, var(--gold) 8.5px 9px, transparent 9.5px),
+                linear-gradient(45deg, transparent 48%, var(--gold) 49%, var(--gold) 51%, transparent 52%),
+                linear-gradient(-45deg, transparent 48%, var(--gold) 49%, var(--gold) 51%, transparent 52%);
+            background-size: 60px 60px, 60px 60px, 60px 60px;
+        }
+
+        /* ============================================================
+                   HEADER
+                   ============================================================ */
+        .site-header {
+            position: fixed;
+            top: 0;
+            inset-inline: 0;
+            z-index: 1000;
+            background: rgba(26, 18, 11, 0.92);
+            backdrop-filter: blur(14px);
+            border-bottom: 1px solid rgba(201, 169, 110, 0.2);
+            height: var(--header-height);
+            transition: background 0.4s ease, box-shadow 0.4s ease;
+        }
+        .site-header.scrolled {
+            background: rgba(26, 18, 11, 0.98);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+        }
+        .header-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: var(--header-height);
+        }
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: var(--gold-pure);
+            flex-shrink: 0;
+        }
+        .brand svg {
+            width: 30px;
+            height: 30px;
+            flex-shrink: 0;
+        }
+        .brand-name {
+            font-family: var(--font-caps);
+            letter-spacing: 0.04em;
+            font-size: 1rem;
+            color: var(--ivory);
+            line-height: 1.2;
+        }
+        .brand-name .ar {
+            font-family: var(--font-arabic);
+            font-weight: 700;
+            color: var(--gold-pure);
+            font-size: 1.2rem;
+            display: block;
+        }
+        .brand-name .sub {
+            font-size: 0.6rem;
+            letter-spacing: 0.18em;
+            color: var(--sand);
+            display: block;
+            margin-top: 2px;
+        }
+
+        .main-nav {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+        }
+        .main-nav ul {
+            display: flex;
+            gap: 32px;
+        }
+        .main-nav a {
+            color: var(--ivory);
+            font-size: 0.9rem;
+            font-weight: 500;
+            position: relative;
+            padding: 6px 0;
+            transition: color 0.3s ease;
+        }
+        .main-nav a::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            inset-inline: 0;
+            height: 2px;
+            background: var(--gold-pure);
+            transform: scaleX(0);
+            transition: transform 0.35s ease;
+        }
+        .main-nav a:hover {
+            color: var(--gold-pure);
+        }
+        .main-nav a:hover::after {
+            transform: scaleX(1);
+        }
+
+        .header-actions {
+            display: flex;
+            align-items: center;
+            gap: 18px;
+        }
+        .lang-switch {
+            display: flex;
+            gap: 4px;
+            font-size: 0.78rem;
+            color: var(--sand);
+        }
+        .lang-switch button {
+            padding: 4px 8px;
+            color: var(--sand);
+            border-radius: 2px;
+            font-weight: 500;
+            transition: 0.2s;
+        }
+        .lang-switch button.active {
+            color: var(--gold-pure);
+            font-weight: 700;
+            background: rgba(212, 175, 55, 0.15);
+        }
+        .lang-switch span {
+            color: rgba(255, 255, 255, 0.2);
+        }
+
+        .btn-gold {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: linear-gradient(135deg, var(--gold) 0%, var(--gold-pure) 100%);
+            color: var(--matte-black);
+            padding: 11px 26px;
+            font-weight: 700;
+            font-size: 0.85rem;
+            border-radius: 4px;
+            box-shadow: 0 0 0 1px rgba(212, 175, 55, 0.3);
+            transition: box-shadow 0.35s ease, transform 0.2s ease;
+            white-space: nowrap;
+        }
+        .btn-gold:hover {
+            box-shadow: 0 0 30px 4px rgba(212, 175, 55, 0.5), 0 0 0 1px rgba(212, 175, 55, 0.7);
+            transform: translateY(-2px);
+        }
+        .btn-outline-gold {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            border: 1px solid var(--gold);
+            color: var(--gold-pure);
+            padding: 10px 24px;
+            font-weight: 600;
+            font-size: 0.85rem;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+            background: transparent;
+        }
+        .btn-outline-gold:hover {
+            background: var(--gold);
+            color: var(--matte-black);
+        }
+
+        .mobile-toggle {
+            display: none;
+            color: var(--gold-pure);
+            font-size: 1.8rem;
+            line-height: 1;
+            padding: 4px 8px;
+        }
+
+        /* Mobile Nav (Slide-in) */
+        .mobile-nav-overlay {
+            position: fixed;
+            inset: 0;
+            z-index: 1001;
+            background: rgba(15, 27, 51, 0.95);
+            backdrop-filter: blur(10px);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+            transform: translateX(100%);
+            transition: transform 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+            padding: 40px;
+        }
+        html[dir="rtl"] .mobile-nav-overlay {
+            transform: translateX(-100%);
+        }
+        .mobile-nav-overlay.open {
+            transform: translateX(0);
+        }
+        .mobile-nav-overlay a {
+            color: var(--ivory);
+            font-size: 1.6rem;
+            font-weight: 600;
+            transition: 0.3s;
+            font-family: var(--font-arabic);
+        }
+        .mobile-nav-overlay a:hover {
+            color: var(--gold-pure);
+            transform: scale(1.05);
+        }
+        .mobile-nav-overlay .close-mobile {
+            position: absolute;
+            top: 30px;
+            inset-inline-end: 30px;
+            font-size: 2.4rem;
+            color: var(--gold-pure);
+        }
+
+        /* ============================================================
+                   HERO
+                   ============================================================ */
+        .hero {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            margin-top: 0;
+        }
+        .hero-bg {
+            position: absolute;
+            inset: 0;
+            z-index: 0;
+        }
+        .hero-bg::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg, rgba(26, 18, 11, 0.4) 0%, rgba(15, 27, 51, 0.75) 70%, var(--matte-black) 100%);
+        }
+        .hero-bg img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            padding-top: calc(var(--header-height) + 20px);
+            width: 100%;
+            padding-bottom: 60px;
+        }
+        .hero-eyebrow {
+            color: var(--gold-pure);
+            font-family: var(--font-caps);
+            font-size: 0.7rem;
+            letter-spacing: 0.25em;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+        .hero-eyebrow::before {
+            content: "";
+            width: 40px;
+            height: 1.5px;
+            background: var(--gold-pure);
+        }
+        .hero h1 {
+            font-family: var(--font-arabic);
+            font-weight: 800;
+            color: var(--gold-pure);
+            font-size: clamp(2.4rem, 6vw, 4.8rem);
+            line-height: 1.2;
+            max-width: 900px;
+            text-shadow: 0 2px 40px rgba(0, 0, 0, 0.5);
+        }
+        .hero .hero-sub-ar {
+            font-family: var(--font-arabic);
+            color: var(--ivory);
+            font-size: 1.4rem;
+            margin-top: 16px;
+            font-weight: 400;
+            opacity: 0.95;
+        }
+        .hero .hero-sub-en {
+            font-family: var(--font-display);
+            font-style: italic;
+            color: var(--sand);
+            font-size: 1.1rem;
+            margin-top: 8px;
+            max-width: 580px;
+        }
+        .hero-cta-row {
+            display: flex;
+            gap: 18px;
+            margin-top: 44px;
+            flex-wrap: wrap;
+        }
+        .hero-stats {
+            display: flex;
+            gap: 50px;
+            margin-top: 70px;
+            padding-top: 34px;
+            border-top: 1px solid rgba(201, 169, 110, 0.25);
+            max-width: 720px;
+            flex-wrap: wrap;
+        }
+        .hero-stat b {
+            display: block;
+            font-family: var(--font-display);
+            color: var(--gold-pure);
+            font-size: 2rem;
+            font-weight: 700;
+        }
+        .hero-stat span {
+            color: var(--sand);
+            font-size: 0.8rem;
+            opacity: 0.8;
+        }
+
+        .scroll-cue {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: var(--gold);
+            font-size: 0.7rem;
+            letter-spacing: 0.2em;
+            text-align: center;
+            z-index: 2;
+            opacity: 0.7;
+        }
+        .scroll-cue .line {
+            width: 1px;
+            height: 34px;
+            background: linear-gradient(var(--gold), transparent);
+            margin: 10px auto 0;
+        }
+
+        .gold-particles {
+            position: absolute;
+            inset: 0;
+            z-index: 1;
+            overflow: hidden;
+            pointer-events: none;
+        }
+        .gold-particles i {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            border-radius: 50%;
+            background: var(--gold-pure);
+            opacity: 0;
+            filter: blur(1px);
+            animation: floatUp 10s linear infinite;
+        }
+        @keyframes floatUp {
+            0% {
+                opacity: 0;
+                transform: translateY(0) scale(0.5);
+            }
+            15% {
+                opacity: 0.8;
+                transform: scale(1);
+            }
+            85% {
+                opacity: 0.5;
+            }
+            100% {
+                opacity: 0;
+                transform: translateY(-450px) scale(0.8);
+            }
+        }
+
+        /* ============================================================
+                   SCARCITY BANNER
+                   ============================================================ */
+        .scarcity-banner {
+            background: var(--burgundy);
+            color: var(--ivory);
+            text-align: center;
+            padding: 14px 20px;
+            font-size: 0.85rem;
+            letter-spacing: 0.01em;
+            position: relative;
+            z-index: 3;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            flex-wrap: wrap;
+            border-bottom: 1px solid var(--gold-pure);
+            animation: pulseGlow 2.8s ease-in-out infinite;
+        }
+        @keyframes pulseGlow {
+            0%,
+            100% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0.85;
+                background: #853b44;
+            }
+        }
+        .scarcity-banner svg {
+            width: 16px;
+            height: 16px;
+            color: var(--gold-pure);
+            flex-shrink: 0;
+        }
+        .scarcity-banner b {
+            color: var(--gold-pure);
+        }
+
+        /* ============================================================
+                   SECTION SHELL
+                   ============================================================ */
+        section {
+            position: relative;
+        }
+        .section-pad {
+            padding: 110px 0;
+        }
+        .section-head {
+            max-width: 720px;
+            margin-bottom: 56px;
+        }
+        .section-head.center {
+            margin-inline: auto;
+            text-align: center;
+        }
+        .eyebrow {
+            font-family: var(--font-caps);
+            color: var(--emerald);
+            font-size: 0.75rem;
+            letter-spacing: 0.2em;
+            margin-bottom: 14px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .eyebrow::before {
+            content: "";
+            width: 30px;
+            height: 1.5px;
+            background: var(--emerald);
+        }
+        .section-head.center .eyebrow {
+            justify-content: center;
+        }
+        .section-head.center .eyebrow::before {
+            display: none;
+        }
+        .section-title-ar {
+            font-family: var(--font-arabic);
+            font-weight: 800;
+            font-size: clamp(1.8rem, 3.6vw, 2.8rem);
+            color: var(--matte-black);
+            line-height: 1.35;
+        }
+        .section-title-en {
+            font-family: var(--font-display);
+            font-style: italic;
+            color: var(--burgundy);
+            font-size: 1.1rem;
+            margin-top: 8px;
+        }
+        .section-copy {
+            margin-top: 18px;
+            color: #4a3f33;
+            font-size: 1rem;
+            max-width: 600px;
+        }
+        .section-head.center .section-copy {
+            margin-inline: auto;
+        }
+
+        /* ============================================================
+                   ABOUT US
+                   ============================================================ */
+        .about-us {
+            background: var(--white);
+            border-top: 3px solid var(--gold-pure);
+            border-bottom: 3px solid var(--gold-pure);
+            box-shadow: inset 0 8px 30px rgba(0, 0, 0, 0.02);
+        }
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+        .about-text .section-copy {
+            font-size: 1.05rem;
+            line-height: 1.9;
+            color: #2d2419;
+        }
+        .about-badges {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 30px;
+        }
+        .about-badges span {
+            background: var(--ivory);
+            border: 1px solid var(--gold);
+            padding: 8px 20px;
+            border-radius: 40px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: var(--emerald);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .about-badges span::before {
+            content: "✓";
+            color: var(--gold-pure);
+            font-weight: 900;
+        }
+        .about-image {
+            position: relative;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
+            aspect-ratio: 4/3;
+        }
+        .about-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .about-image .gold-frame {
+            position: absolute;
+            inset: 16px;
+            border: 1px solid var(--gold-pure);
+            border-radius: 6px;
+            pointer-events: none;
+            z-index: 2;
+        }
+
+        /* ============================================================
+                   WHY TURKEY – (Vatandaşlık vurgusu yok, şeffaflık ve güven)
+                   ============================================================ */
+        .why-turkey {
+            background: var(--emerald);
+            color: var(--ivory);
+            overflow: hidden;
+        }
+        .why-turkey .eyebrow {
+            color: var(--gold-pure);
+        }
+        .why-turkey .eyebrow::before {
+            background: var(--gold-pure);
+        }
+        .why-turkey .section-title-ar {
+            color: var(--white);
+        }
+        .why-turkey .section-title-en {
+            color: var(--sand);
+        }
+        .why-turkey .section-copy {
+            color: rgba(255, 248, 231, 0.8);
+        }
+        .why-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2px;
+            margin-top: 56px;
+            background: rgba(201, 169, 110, 0.2);
+        }
+        .why-card {
+            background: #00483c;
+            padding: 40px 28px;
+            text-align: center;
+            transition: 0.4s ease;
+        }
+        .why-card:hover {
+            background: #005b4c;
+            transform: translateY(-4px);
+        }
+        .why-card .icon {
+            width: 56px;
+            height: 56px;
+            margin: 0 auto 20px;
+            border: 1px solid var(--gold);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--gold-pure);
+            transition: 0.4s;
+        }
+        .why-card:hover .icon {
+            background: var(--gold);
+            color: var(--matte-black);
+        }
+        .why-card h3 {
+            font-family: var(--font-arabic);
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--gold-pure);
+            margin-bottom: 6px;
+        }
+        .why-card p {
+            font-size: 0.85rem;
+            color: rgba(255, 248, 231, 0.75);
+        }
+
+        /* ============================================================
+                   PROPERTIES
+                   ============================================================ */
+        .properties {
+            background: var(--ivory);
+        }
+        .filter-bar {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 14px;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 48px;
+            padding: 20px 28px;
+            background: var(--white);
+            border: 1px solid var(--sand);
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
+        }
+        .filter-group {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+        .chip {
+            padding: 8px 18px;
+            border: 1px solid var(--sand);
+            font-size: 0.82rem;
+            color: var(--matte-black);
+            border-radius: 30px;
+            transition: all 0.25s ease;
+            background: transparent;
+        }
+        .chip.active,
+        .chip:hover {
+            background: var(--matte-black);
+            color: var(--gold-pure);
+            border-color: var(--matte-black);
+        }
+        .currency-select {
+            border: 1px solid var(--sand);
+            padding: 8px 14px;
+            font-size: 0.82rem;
+            background: var(--ivory);
+            color: var(--matte-black);
+            font-family: inherit;
+            border-radius: 30px;
+        }
+
+        .property-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+        .property-card {
+            background: var(--white);
+            border: 1px solid rgba(201, 169, 110, 0.3);
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease;
+        }
+        .property-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 30px 60px -20px rgba(26, 18, 11, 0.4);
+            border-color: var(--gold-pure);
+        }
+        .card-media {
+            position: relative;
+            aspect-ratio: 4/3;
+            overflow: hidden;
+        }
+        .card-media img {
+            transition: transform 0.7s ease;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .property-card:hover .card-media img {
+            transform: scale(1.08);
+        }
+        .ribbon {
+            position: absolute;
+            top: 16px;
+            inset-inline-start: 16px;
+            z-index: 2;
+            background: linear-gradient(135deg, var(--gold), var(--gold-pure));
+            color: var(--matte-black);
+            font-size: 0.7rem;
+            font-weight: 800;
+            padding: 5px 16px;
+            border-radius: 2px;
+            box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3);
+            letter-spacing: 0.04em;
+        }
+        .scarcity-tag {
+            position: absolute;
+            top: 16px;
+            inset-inline-end: 16px;
+            z-index: 2;
+            background: rgba(114, 47, 55, 0.92);
+            color: var(--ivory);
+            font-size: 0.68rem;
+            font-weight: 700;
+            padding: 5px 12px;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            backdrop-filter: blur(4px);
+        }
+        .scarcity-tag svg {
+            width: 12px;
+            height: 12px;
+            color: var(--gold-pure);
+        }
+        .card-3d {
+            position: absolute;
+            bottom: 14px;
+            inset-inline-end: 14px;
+            z-index: 2;
+            background: rgba(15, 27, 51, 0.85);
+            color: var(--ivory);
+            font-size: 0.7rem;
+            padding: 6px 14px;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            border: 1px solid rgba(201, 169, 110, 0.4);
+            backdrop-filter: blur(4px);
+        }
+        .card-body {
+            padding: 24px 26px 26px;
+        }
+        .card-loc {
+            font-size: 0.75rem;
+            color: var(--emerald);
+            font-weight: 700;
+            margin-bottom: 6px;
+            letter-spacing: 0.03em;
+        }
+        .card-title-ar {
+            font-family: var(--font-arabic);
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 2px;
+        }
+        .card-title-en {
+            font-family: var(--font-display);
+            font-style: italic;
+            color: #7a6a52;
+            font-size: 0.85rem;
+            margin-bottom: 14px;
+        }
+        .card-features {
+            display: flex;
+            gap: 18px;
+            font-size: 0.78rem;
+            color: #5a4d3d;
+            margin-bottom: 18px;
+            flex-wrap: wrap;
+        }
+        .card-features span {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        .card-price-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-top: 16px;
+            border-top: 1px dashed var(--sand);
+        }
+        .price-main {
+            font-family: var(--font-display);
+            font-weight: 700;
+            font-size: 1.3rem;
+            color: var(--burgundy);
+        }
+        .price-sub {
+            font-size: 0.7rem;
+            color: #8a7a63;
+        }
+        .card-cta {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            background: var(--emerald);
+            color: var(--white);
+            padding: 8px 18px;
+            font-size: 0.78rem;
+            font-weight: 700;
+            border-radius: 40px;
+            transition: 0.3s ease;
+        }
+        .card-cta:hover {
+            background: var(--gold-pure);
+            color: var(--matte-black);
+            transform: scale(1.03);
+        }
+        .properties-more {
+            text-align: center;
+            margin-top: 56px;
+        }
+
+        /* ============================================================
+                   TRUST – Güven, şeffaflık odaklı (fiyat yok)
+                   ============================================================ */
+        .trust {
+            background: var(--matte-black);
+            color: var(--ivory);
+        }
+        .trust .eyebrow {
+            color: var(--gold-pure);
+        }
+        .trust .eyebrow::before {
+            background: var(--gold-pure);
+        }
+        .trust .section-title-ar {
+            color: var(--white);
+        }
+        .trust .section-title-en {
+            color: var(--sand);
+        }
+        .trust-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+            margin-top: 52px;
+        }
+        .badge-card {
+            border: 1px solid rgba(201, 169, 110, 0.2);
+            padding: 32px 24px;
+            text-align: center;
+            background: linear-gradient(180deg, rgba(0, 91, 76, 0.12), transparent);
+            border-radius: 8px;
+            transition: 0.4s ease;
+        }
+        .badge-card:hover {
+            border-color: var(--gold);
+            transform: translateY(-4px);
+        }
+        .badge-card .badge-icon {
+            width: 60px;
+            height: 60px;
+            margin: 0 auto 18px;
+            border-radius: 50%;
+            background: var(--emerald);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--gold-pure);
+            border: 1px solid var(--gold);
+            transition: 0.4s;
+        }
+        .badge-card:hover .badge-icon {
+            background: var(--gold-pure);
+            color: var(--matte-black);
+        }
+        .badge-card h4 {
+            font-family: var(--font-arabic);
+            font-weight: 700;
+            font-size: 1rem;
+            color: var(--gold-pure);
+        }
+        .badge-card p {
+            font-size: 0.78rem;
+            color: rgba(255, 248, 231, 0.6);
+            margin-top: 4px;
+        }
+
+        .investment-strip {
+            margin-top: 70px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            border: 1px solid rgba(201, 169, 110, 0.2);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .invest-panel {
+            padding: 44px 40px;
+        }
+        .invest-panel.gold-panel {
+            background: linear-gradient(135deg, rgba(201, 169, 110, 0.12), rgba(212, 175, 55, 0.04));
+            border-inline-end: 1px solid rgba(201, 169, 110, 0.2);
+        }
+        .invest-panel h3 {
+            font-family: var(--font-arabic);
+            font-size: 1.3rem;
+            color: var(--gold-pure);
+            margin-bottom: 12px;
+        }
+        .invest-panel .big-number {
+            font-family: var(--font-display);
+            font-size: 2.2rem;
+            color: var(--white);
+            font-weight: 700;
+            letter-spacing: 0.02em;
+        }
+        .invest-panel p {
+            color: rgba(255, 248, 231, 0.7);
+            font-size: 0.9rem;
+            margin-top: 10px;
+        }
+        .crypto-note {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            margin-top: 16px;
+            color: var(--gold-pure);
+            font-size: 0.82rem;
+            border: 1px dashed var(--gold);
+            padding: 6px 16px;
+            border-radius: 40px;
+        }
+
+        /* ============================================================
+                   MAJLIS
+                   ============================================================ */
+        .majlis {
+            background: var(--sand);
+        }
+        .majlis-grid {
+            display: grid;
+            grid-template-columns: 1.1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+        .majlis-media {
+            position: relative;
+            aspect-ratio: 4/3;
+            border-radius: 12px;
+            overflow: hidden;
+        }
+        .majlis-media img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .majlis-media .frame {
+            position: absolute;
+            inset: 18px;
+            border: 1px solid var(--gold-pure);
+            pointer-events: none;
+            z-index: 2;
+            border-radius: 4px;
+        }
+        .majlis-list {
+            margin-top: 28px;
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+        }
+        .majlis-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
+        }
+        .majlis-list .dot {
+            width: 10px;
+            height: 10px;
+            margin-top: 6px;
+            border-radius: 50%;
+            background: var(--gold-pure);
+            flex-shrink: 0;
+        }
+        .majlis-list b {
+            font-family: var(--font-arabic);
+            display: block;
+            font-size: 1.02rem;
+        }
+        .majlis-list span {
+            font-size: 0.85rem;
+            color: #5a4d3d;
+        }
+
+        /* ============================================================
+                   VIP
+                   ============================================================ */
+        .vip {
+            background: linear-gradient(135deg, var(--sapphire) 0%, #0a1425 100%);
+            color: var(--ivory);
+            overflow: hidden;
+        }
+        .vip .eyebrow {
+            color: var(--gold-pure);
+        }
+        .vip .eyebrow::before {
+            background: var(--gold-pure);
+        }
+        .vip .section-title-ar {
+            color: var(--white);
+        }
+        .vip-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2px;
+            margin-top: 52px;
+            background: rgba(201, 169, 110, 0.15);
+        }
+        .vip-item {
+            background: #0d1930;
+            padding: 34px 26px;
+            transition: 0.4s ease;
+        }
+        .vip-item:hover {
+            background: #142244;
+        }
+        .vip-item .num {
+            font-family: var(--font-display);
+            color: var(--gold-pure);
+            font-size: 0.8rem;
+            letter-spacing: 0.1em;
+            margin-bottom: 14px;
+        }
+        .vip-item h4 {
+            font-family: var(--font-arabic);
+            font-size: 1.05rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+        .vip-item p {
+            font-size: 0.82rem;
+            color: rgba(255, 248, 231, 0.6);
+        }
+        .vip-cta-row {
+            margin-top: 56px;
+            text-align: center;
+        }
+        .vip-service-phrase {
+            font-family: var(--font-arabic);
+            color: var(--gold-pure);
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin-bottom: 22px;
+        }
+
+        /* ============================================================
+                   TESTIMONIALS (5 items)
+                   ============================================================ */
+        .testimonials {
+            background: var(--white);
+        }
+        .test-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+        }
+        .test-card {
+            background: var(--ivory);
+            border: 1px solid var(--sand);
+            padding: 34px;
+            border-radius: 8px;
+            flex: 1 1 280px;
+            max-width: 340px;
+            transition: 0.4s ease;
+            display: flex;
+            flex-direction: column;
+        }
+        .test-card:hover {
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.05);
+            border-color: var(--gold);
+        }
+        .test-quote-mark {
+            font-family: var(--font-display);
+            font-size: 3rem;
+            color: var(--gold-pure);
+            line-height: 1;
+            margin-bottom: 8px;
+            display: block;
+        }
+        .test-card p {
+            font-size: 0.92rem;
+            color: #3a3025;
+            margin-bottom: 22px;
+            flex-grow: 1;
+        }
+        .test-person {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            margin-top: auto;
+            border-top: 1px solid rgba(0, 0, 0, 0.04);
+            padding-top: 16px;
+        }
+        .test-person img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            border: 2px solid var(--gold);
+            object-fit: cover;
+            flex-shrink: 0;
+        }
+        .test-person b {
+            font-family: var(--font-arabic);
+            font-size: 0.95rem;
+            display: block;
+        }
+        .test-person .flag {
+            font-size: 0.75rem;
+            color: #8a7a63;
+        }
+
+        /* ============================================================
+                   FOOTER
+                   ============================================================ */
+        footer {
+            background: var(--sapphire);
+            color: var(--ivory);
+            padding-top: 80px;
+        }
+        .footer-top {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 1fr 1fr;
+            gap: 40px;
+            padding-bottom: 56px;
+        }
+        .footer-brand p {
+            font-size: 0.84rem;
+            color: rgba(255, 248, 231, 0.6);
+            margin-top: 14px;
+            max-width: 280px;
+        }
+        .footer-col h5 {
+            font-family: var(--font-arabic);
+            color: var(--gold-pure);
+            font-size: 0.95rem;
+            margin-bottom: 16px;
+            font-weight: 700;
+        }
+        .footer-col ul {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .footer-col a {
+            font-size: 0.84rem;
+            color: rgba(255, 248, 231, 0.65);
+            transition: 0.3s;
+        }
+        .footer-col a:hover {
+            color: var(--gold-pure);
+        }
+        .footer-social {
+            display: flex;
+            gap: 14px;
+            margin-top: 20px;
+        }
+        .footer-social a {
+            width: 38px;
+            height: 38px;
+            border: 1px solid rgba(201, 169, 110, 0.3);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--gold-pure);
+            transition: 0.3s;
+        }
+        .footer-social a:hover {
+            background: var(--gold-pure);
+            color: var(--matte-black);
+            border-color: var(--gold-pure);
+        }
+        .divider-line {
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--gold-pure), transparent);
+            opacity: 0.4;
+        }
+        .footer-bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 24px 0;
+            font-size: 0.78rem;
+            color: rgba(255, 248, 231, 0.5);
+            flex-wrap: wrap;
+            gap: 14px;
+        }
+        .footer-trust {
+            display: flex;
+            gap: 22px;
+            flex-wrap: wrap;
+        }
+        .footer-trust span {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            color: rgba(255, 248, 231, 0.7);
+        }
+        .thanks-line {
+            text-align: center;
+            font-family: var(--font-arabic);
+            color: var(--gold-pure);
+            font-size: 1.1rem;
+            font-weight: 700;
+            padding-bottom: 34px;
+            opacity: 0.8;
+        }
+
+        /* ============================================================
+                   WHATSAPP FLOAT
+                   ============================================================ */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 28px;
+            inset-inline-end: 28px;
+            z-index: 999;
+            width: 62px;
+            height: 62px;
+            border-radius: 50%;
+            background: #25D366;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 8px 28px rgba(0, 0, 0, 0.35);
+            border: 2px solid var(--gold-pure);
+            animation: pulseWA 2.4s ease-in-out infinite;
+            transition: 0.3s;
+        }
+        .whatsapp-float:hover {
+            transform: scale(1.08);
+        }
+        @keyframes pulseWA {
+            0%,
+            100% {
+                box-shadow: 0 8px 28px rgba(0, 0, 0, 0.3), 0 0 0 0 rgba(37, 211, 102, 0.5);
+            }
+            50% {
+                box-shadow: 0 8px 28px rgba(0, 0, 0, 0.3), 0 0 0 12px rgba(37, 211, 102, 0);
+            }
+        }
+
+        /* ============================================================
+                   REVEAL
+                   ============================================================ */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+        .reveal.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* ============================================================
+                   BACK TO TOP
+                   ============================================================ */
+        .back-top {
+            position: fixed;
+            bottom: 28px;
+            inset-inline-start: 28px;
+            z-index: 998;
+            background: var(--matte-black);
+            color: var(--gold-pure);
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            border: 1px solid var(--gold);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.4rem;
+            opacity: 0;
+            visibility: hidden;
+            transition: 0.4s ease;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+        }
+        .back-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+        .back-top:hover {
+            background: var(--gold-pure);
+            color: var(--matte-black);
+        }
+
+        /* ============================================================
+                   RESPONSIVE
+                   ============================================================ */
+        @media (max-width: 1024px) {
+            .property-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .why-grid,
+            .trust-grid,
+            .vip-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .majlis-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            .investment-strip {
+                grid-template-columns: 1fr;
+            }
+            .invest-panel.gold-panel {
+                border-inline-end: none;
+                border-bottom: 1px solid rgba(201, 169, 110, 0.2);
+            }
+            .footer-top {
+                grid-template-columns: 1fr 1fr;
+            }
+            .about-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            .about-image {
+                order: -1;
+            }
+        }
+
+        @media (max-width: 780px) {
+            .main-nav ul,
+            .lang-switch {
+                display: none;
+            }
+            .mobile-toggle {
+                display: block;
+            }
+            .header-actions .btn-gold {
+                padding: 8px 16px;
+                font-size: 0.75rem;
+            }
+            .hero-stats {
+                gap: 28px;
+            }
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+            .section-pad {
+                padding: 80px 0;
+            }
+            .property-grid,
+            .test-grid {
+                grid-template-columns: 1fr;
+            }
+            .why-grid,
+            .trust-grid,
+            .vip-grid {
+                grid-template-columns: 1fr;
+            }
+            .footer-top {
+                grid-template-columns: 1fr;
+            }
+            .back-top {
+                bottom: 100px;
+                inset-inline-start: 16px;
+                width: 38px;
+                height: 38px;
+                font-size: 1.2rem;
+            }
+            .whatsapp-float {
+                width: 54px;
+                height: 54px;
+                bottom: 20px;
+                inset-inline-end: 20px;
+            }
+            .test-card {
+                flex: 1 1 100%;
+                max-width: 100%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 16px;
+            }
+            .hero-cta-row .btn-gold,
+            .hero-cta-row .btn-outline-gold {
+                width: 100%;
+                justify-content: center;
+            }
+            .filter-bar {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            .filter-group {
+                justify-content: center;
+            }
+            .currency-select {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- ============ CURSOR GLOW ============ -->
+    <div class="cursor-glow" id="cursorGlow" style="position:fixed;width:360px;height:360px;border-radius:50%;pointer-events:none;z-index:1;background:radial-gradient(circle,rgba(212,175,55,0.08),transparent 70%);transform:translate(-50%,-50%);left:0;top:0;display:none;"></div>
+
+    <!-- ============ HEADER ============ -->
+    <header class="site-header" id="siteHeader">
+        <div class="container header-inner">
+            <a href="#top" class="brand">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M12 2l2.2 5.8L20 9l-4.6 3.9L16.8 19 12 15.6 7.2 19l1.4-6.1L4 9l5.8-1.2L12 2z"/></svg>
+                <span class="brand-name">
+                    <span class="ar">دار الكرامة</span>
+                    Dar Al-Karama
+                    <span class="sub">ISTANBUL · ANTALYA</span>
+                </span>
+            </a>
+
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#about" data-i18n="navAbout">من نحن</a></li>
+                    <li><a href="#properties" data-i18n="nav1">العقارات</a></li>
+                    <li><a href="#why" data-i18n="nav2">لماذا تركيا</a></li>
+                    <li><a href="#vip" data-i18n="nav3">خدمات VIP</a></li>
+                    <li><a href="#trust" data-i18n="nav4">الاستثمار</a></li>
+                    <li><a href="#footer" data-i18n="nav5">تواصل</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-actions">
+                <div class="lang-switch">
+                    <button class="active" data-lang="ar">AR</button><span>|</span>
+                    <button data-lang="en">EN</button><span>|</span>
+                    <button data-lang="tr">TR</button>
+                </div>
+                <a href="#contact" class="btn-gold" data-i18n="navCta">جولة VIP</a>
+                <button class="mobile-toggle" id="mobileToggle" aria-label="Menu">☰</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- ============ MOBILE NAV OVERLAY ============ -->
+    <div class="mobile-nav-overlay" id="mobileNavOverlay">
+        <button class="close-mobile" id="closeMobile">✕</button>
+        <a href="#about" data-i18n="navAbout">من نحن</a>
+        <a href="#properties" data-i18n="nav1">العقارات</a>
+        <a href="#why" data-i18n="nav2">لماذا تركيا</a>
+        <a href="#vip" data-i18n="nav3">خدمات VIP</a>
+        <a href="#trust" data-i18n="nav4">الاستثمار</a>
+        <a href="#footer" data-i18n="nav5">تواصل</a>
+        <a href="#contact" class="btn-gold" style="margin-top:10px;" data-i18n="navCta">جولة VIP</a>
+    </div>
+
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="top">
+        <div class="hero-bg">
+            <img src="https://images.unsplash.com/photo-1613977257363-707ba9348227?q=80&w=2000&auto=format&fit=crop" alt="Luxury villa Istanbul Bosphorus view" loading="eager">
+        </div>
+        <div class="gold-particles" id="particles"></div>
+        <div class="container hero-content">
+            <p class="hero-eyebrow">DAR AL-KARAMA REAL ESTATE — ISTANBUL · ANTALYA</p>
+            <h1 data-i18n="heroTitle">ثقة وجودة في عقارات إسطنبول وأنطاليا</h1>
+            <p class="hero-sub-ar" data-i18n="heroSubMain">حيث الفخامة تلتقي بالبحر الأبيض المتوسط</p>
+            <p class="hero-sub-en" data-i18n="heroSubSecondary">Premium villas, private marinas &amp; estates for the region's most distinguished families.</p>
+
+            <div class="hero-cta-row">
+                <a href="#contact" class="btn-gold" data-i18n="heroBtn1">احجز جولتك المجانية</a>
+                <a href="#properties" class="btn-outline-gold" data-i18n="heroBtn2">تصفح العقارات</a>
+            </div>
+
+            <div class="hero-stats">
+                <div class="hero-stat"><b>412</b><span data-i18n="stat1">عقار تم تسليمه</span></div>
+                <div class="hero-stat"><b>19</b><span data-i18n="stat2">سنة خبرة</span></div>
+                <div class="hero-stat"><b>100%</b><span data-i18n="stat3">شفافية قانونية</span></div>
+                <div class="hero-stat"><b>24/7</b><span data-i18n="stat4">دعم متواصل</span></div>
+            </div>
+        </div>
+        <div class="scroll-cue"><span data-i18n="scrollCue">اكتشف المزيد</span><div class="line"></div></div>
+    </section>
+
+    <!-- ============ SCARCITY BANNER ============ -->
+    <div class="scarcity-banner">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L4 14h6l-1 8 9-12h-6l1-8z"/></svg>
+        <span data-i18n="scarcityBannerText">عدد محدود من العقارات المتاحة هذا الموسم — فرص استثمارية نادرة</span>
+    </div>
+
+    <!-- ============ ABOUT US (WHO WE ARE) ============ -->
+    <section class="about-us section-pad" id="about">
+        <div class="container about-grid">
+            <div class="about-text reveal">
+                <div class="section-head">
+                    <p class="eyebrow" data-i18n="aboutEyebrow">من نحن</p>
+                    <h2 class="section-title-ar" data-i18n="aboutTitle">شريككم الموثوق في تركيا</h2>
+                    <p class="section-title-en" data-i18n="aboutSub">Your trusted partner in Turkey</p>
+                </div>
+                <p class="section-copy" data-i18n="aboutCopy">
+                    دار الكرامة ليست مجرد وكالة عقارية؛ بل هي الجسر الذي يربط العائلات العربية المميزة بأرقى العقارات في تركيا. بفضل اعتمادنا الرسمي من الحكومة التركية وغرفة التجارة العربية، نقدم تجربة سلسة وشفافة وملكية. فريقنا من الخبراء متعددي اللغات يتولى كل التفاصيل — بدءاً من الإجراءات القانونية وصولاً إلى الجولات الشخصية VIP — ليضمن أن تكون رحلتكم لامتلاك قطعة من الجنة في إسطنبول أو أنطاليا على قدر من الكرامة.
+                </p>
+                <div class="about-badges">
+                    <span data-i18n="badgeTrust1">شريك رسمي معتمد من الحكومة التركية</span>
+                    <span data-i18n="badgeTrust2">عضو في غرفة التجارة العربية</span>
+                    <span data-i18n="badgeTrust3">خبراء في الإجراءات القانونية</span>
+                </div>
+            </div>
+            <div class="about-image reveal">
+                <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?q=80&w=1400&auto=format&fit=crop" alt="Luxury real estate team in Turkey" loading="lazy">
+                <div class="gold-frame"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ WHY TURKEY ============ -->
+    <section class="why-turkey section-pad" id="why">
+        <div class="arabesque-bg"></div>
+        <div class="container">
+            <div class="section-head center reveal">
+                <p class="eyebrow" data-i18n="whyEyebrow">لماذا تركيا</p>
+                <h2 class="section-title-ar" data-i18n="whyTitle">بيئة استثمارية شفافة ومدعومة حكومياً</h2>
+                <p class="section-title-en" data-i18n="whySub">A transparent, state-backed investment environment</p>
+            </div>
+            <div class="why-grid">
+                <div class="why-card reveal">
+                    <div class="icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2l2.5 6.5L21 9l-5.5 4.5L17 21l-5-3.5L7 21l1.5-7.5L3 9l6.5-.5z"/></svg></div>
+                    <h3 data-i18n="why1Title">دعم قانوني كامل</h3>
+                    <p data-i18n="why1Copy">نقدم لك استشارات قانونية شفافة ومتابعة كاملة لإجراءات الملكية والإقامة، دون أي رسوم خفية.</p>
+                </div>
+                <div class="why-card reveal">
+                    <div class="icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M8 2v4M16 2v4M4 10h16"/></svg></div>
+                    <h3 data-i18n="why2Title">إقامة ميسرة</h3>
+                    <p data-i18n="why2Copy">إجراءات إقامة واضحة وسريعة للمستثمر وعائلته، مع دعم كامل من فريقنا المتخصص.</p>
+                </div>
+                <div class="why-card reveal">
+                    <div class="icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 12h18M12 3v18"/></svg></div>
+                    <h3 data-i18n="why3Title">شفافية ضريبية</h3>
+                    <p data-i18n="why3Copy">نظام ضريبي واضح ومزايا للمشترين الأجانب، مع توضيح كامل لجميع التكاليف.</p>
+                </div>
+                <div class="why-card reveal">
+                    <div class="icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 21s-7-4.4-9.5-9C.5 8 2 4 6 4c2 0 3.5 1.2 4 2.5C10.5 5.2 12 4 14 4c4 0 5.5 4 3.5 8-2.5 4.6-9.5 9-9.5 9z"/></svg></div>
+                    <h3 data-i18n="why4Title">موقع استراتيجي</h3>
+                    <p data-i18n="why4Copy">ساعات معدودة من دبي والرياض والكويت، وبوابة مباشرة بين الخليج وأوروبا.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ PROPERTIES ============ -->
+    <section class="properties section-pad" id="properties">
+        <div class="container">
+            <div class="section-head reveal">
+                <p class="eyebrow" data-i18n="propEyebrow">مختارات دار الكرامة</p>
+                <h2 class="section-title-ar" data-i18n="propTitle">عقارات فاخرة في إسطنبول وأنطاليا</h2>
+                <p class="section-title-en" data-i18n="propSub">A curated portfolio of villas, marinas &amp; estates</p>
+            </div>
+
+            <div class="filter-bar reveal">
+                <div class="filter-group" id="cityFilters">
+                    <button class="chip active" data-city="all" data-i18n="filterAll">الكل</button>
+                    <button class="chip" data-city="istanbul" data-i18n="cityIstanbul">إسطنبول</button>
+                    <button class="chip" data-city="antalya" data-i18n="cityAntalya">أنطاليا</button>
+                </div>
+                <div class="filter-group" id="typeFilters">
+                    <button class="chip active" data-type="all" data-i18n="filterAllTypes">جميع الأنواع</button>
+                    <button class="chip" data-type="villa" data-i18n="typeVilla">فيلا</button>
+                    <button class="chip" data-type="marina" data-i18n="typeMarina">مارينا</button>
+                    <button class="chip" data-type="land" data-i18n="typeLand">أرض</button>
+                </div>
+                <select class="currency-select" id="currencySelect">
+                    <option value="USD">USD $</option>
+                    <option value="TRY">TRY ₺</option>
+                    <option value="AED">AED د.إ</option>
+                    <option value="SAR">SAR ر.س</option>
+                    <option value="QAR">QAR ر.ق</option>
+                    <option value="KWD">KWD د.ك</option>
+                </select>
+            </div>
+
+            <div class="property-grid" id="propertyGrid"></div>
+
+            <div class="properties-more reveal">
+                <a href="#contact" class="btn-outline-gold" data-i18n="propMoreBtn">عرض جميع العقارات (48)</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ TRUST ============ -->
+    <section class="trust section-pad" id="trust">
+        <div class="container">
+            <div class="section-head center reveal">
+                <p class="eyebrow" data-i18n="trustEyebrow">ثقة موثقة</p>
+                <h2 class="section-title-ar" data-i18n="trustTitle">شراكة رسمية، وضمانات حكومية</h2>
+                <p class="section-title-en" data-i18n="trustSub">Certified, licensed, and backed by official partnerships</p>
+            </div>
+            <div class="trust-grid">
+                <div class="badge-card reveal">
+                    <div class="badge-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2l7 4v6c0 5-3 8-7 10-4-2-7-5-7-10V6l7-4z"/></svg></div>
+                    <h4 data-i18n="badge1">استثمار آمن</h4>
+                    <p>Secure Investment</p>
+                </div>
+                <div class="badge-card reveal">
+                    <div class="badge-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 12l5 5L20 6"/></svg></div>
+                    <h4 data-i18n="badge2">ترخيص رسمي</h4>
+                    <p>Official License</p>
+                </div>
+                <div class="badge-card reveal">
+                    <div class="badge-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="7" width="18" height="13" rx="1"/><path d="M8 7V5a2 2 0 012-2h4a2 2 0 012 2v2"/></svg></div>
+                    <h4 data-i18n="badge3">دعم حكومي</h4>
+                    <p>Government Support</p>
+                </div>
+                <div class="badge-card reveal">
+                    <div class="badge-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2l2.5 6.5L21 9l-5.5 4.5L17 21l-5-3.5L7 21l1.5-7.5L3 9l6.5-.5z"/></svg></div>
+                    <h4 data-i18n="badge4">جودة مضمونة</h4>
+                    <p data-i18n="badge4sub">Quality Guaranteed</p>
+                </div>
+            </div>
+
+            <div class="investment-strip">
+                <div class="invest-panel gold-panel reveal">
+                    <h3 data-i18n="investTitle">استثمار عقاري شفاف</h3>
+                    <p class="big-number">ضمان قانوني كامل</p>
+                    <p data-i18n="investCopy">جميع معاملاتنا تتم بشفافية تامة، مع عقود موثقة قانونياً وحماية كاملة لحقوقك. نقدم لك استشارات مجانية قبل أي التزام.</p>
+                </div>
+                <div class="invest-panel reveal">
+                    <h3 data-i18n="payTitle">مرونة في الدفع</h3>
+                    <p style="color:var(--ivory); font-size:1.1rem; font-weight:700;" data-i18n="payHeadline">خيارات دفع متعددة تناسب احتياجاتك</p>
+                    <p data-i18n="payCopy">نوفر لعملائنا من كبار المستثمرين مرونة تامة في طرق السداد، بما يشمل التحويل البنكي الدولي، والسبائك الذهبية، والعملات الرقمية الموثوقة.</p>
+                    <div class="crypto-note">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M9 12l2 2 4-4"/></svg>
+                        Gold &amp; Crypto Payment Available
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ MAJLIS ============ -->
+    <section class="majlis section-pad" id="majlis">
+        <div class="container majlis-grid">
+            <div class="reveal">
+                <div class="majlis-media">
+                    <img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?q=80&w=1400&auto=format&fit=crop" alt="Luxury villa interior majlis style" loading="lazy">
+                    <div class="frame"></div>
+                </div>
+            </div>
+            <div class="reveal">
+                <div class="section-head">
+                    <p class="eyebrow" data-i18n="majlisEyebrow">الضيافة العربية</p>
+                    <h2 class="section-title-ar" data-i18n="majlisTitle">صممت خصيصاً للعائلات العربية</h2>
+                    <p class="section-title-en" data-i18n="majlisSub">Designed specifically for Arab families</p>
+                    <p class="section-copy" data-i18n="majlisCopy">مجالس واسعة، أجنحة منفصلة للرجال والنساء، ومطابخ كبيرة تتسع لاجتماعات العائلة — كل تفصيل صُمم حول تقاليد الضيافة الخليجية.</p>
+                </div>
+                <ul class="majlis-list">
+                    <li><span class="dot"></span><div><b data-i18n="maj1b">خصوصية تامة</b><span data-i18n="maj1s">بوابات خاصة وجدران عازلة للنظر</span></div></li>
+                    <li><span class="dot"></span><div><b data-i18n="maj2b">مسبح خاص</b><span data-i18n="maj2s">داخلي وخارجي في كل فيلا</span></div></li>
+                    <li><span class="dot"></span><div><b data-i18n="maj3b">حديقة خاصة</b><span data-i18n="maj3s">مساحات خضراء محاطة بأسوار</span></div></li>
+                    <li><span class="dot"></span><div><b data-i18n="maj4b">مجالس منفصلة</b><span data-i18n="maj4s">أجنحة مستقلة للرجال والنساء</span></div></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ VIP ============ -->
+    <section class="vip section-pad" id="vip">
+        <div class="arabesque-bg"></div>
+        <div class="container">
+            <div class="section-head center reveal">
+                <p class="eyebrow" data-i18n="vipEyebrow">خدمة كونسيرج VIP</p>
+                <h2 class="section-title-ar" data-i18n="vipTitle">نحن في خدمتكم 24 ساعة</h2>
+                <p class="section-title-en" data-i18n="vipSub">We are at your service, 24 hours a day</p>
+            </div>
+            <div class="vip-grid">
+                <div class="vip-item reveal"><div class="num">01</div><h4 data-i18n="vip1Title">طيران خاص</h4><p data-i18n="vip1Copy">رحلة خاصة من دبي أو إسطنبول عند زيارتكم لمعاينة العقار.</p></div>
+                <div class="vip-item reveal"><div class="num">02</div><h4 data-i18n="vip2Title">إقامة 7 نجوم</h4><p data-i18n="vip2Copy">إقامة في أرقى الفنادق خلال فترة البحث والمعاينة.</p></div>
+                <div class="vip-item reveal"><div class="num">03</div><h4 data-i18n="vip3Title">مترجم شخصي</h4><p data-i18n="vip3Copy">مترجم عربي مرافق طوال الزيارة والإجراءات القانونية.</p></div>
+                <div class="vip-item reveal"><div class="num">04</div><h4 data-i18n="vip4Title">سيارة مع سائق</h4><p data-i18n="vip4Copy">مرسيدس أو بنتلي مع سائق خاص طوال إقامتكم.</p></div>
+            </div>
+            <div class="vip-cta-row reveal">
+                <p class="vip-service-phrase" data-i18n="vipPhrase">نحن في خدمتكم 24 ساعة</p>
+                <a href="#contact" class="btn-gold" data-i18n="vipCta">تحدث مع مستشارك الشخصي</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ TESTIMONIALS (5 Adet) ============ -->
+    <section class="testimonials section-pad">
+        <div class="container">
+            <div class="section-head center reveal">
+                <p class="eyebrow" data-i18n="testEyebrow">قالوا عنا</p>
+                <h2 class="section-title-ar" data-i18n="testTitle">عائلات وثقت بدار الكرامة</h2>
+                <p class="section-title-en" data-i18n="testSub">Families who trusted Dar Al-Karama with their new home</p>
+            </div>
+            <div class="test-grid">
+                <!-- 1 -->
+                <div class="test-card reveal">
+                    <span class="test-quote-mark">&rdquo;</span>
+                    <p data-i18n="test1">منذ اللحظة الأولى شعرنا أننا في بيتنا. الفيلا في بيبك تفوق كل توقعاتنا، والفريق تعامل معنا بخصوصية واحترام تام.</p>
+                    <div class="test-person">
+                        <img src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?q=80&w=200&auto=format&fit=crop" alt="Client photo" loading="lazy">
+                        <div><b data-i18n="test1name">عائلة الفلاسي</b><span class="flag">🇦🇪 <span data-i18n="test1loc">دبي، الإمارات</span></span></div>
+                    </div>
+                </div>
+                <!-- 2 -->
+                <div class="test-card reveal">
+                    <span class="test-quote-mark">&rdquo;</span>
+                    <p data-i18n="test2">إجراءات الملكية تمّت بسلاسة تامة، وخدمة الكونسيرج أرسلت لنا سيارة ومترجم من أول يوم وصلنا فيه إسطنبول.</p>
+                    <div class="test-person">
+                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=200&auto=format&fit=crop" alt="Client photo" loading="lazy">
+                        <div><b data-i18n="test2name">الأستاذ خالد العتيبي</b><span class="flag">🇸🇦 <span data-i18n="test2loc">الرياض، السعودية</span></span></div>
+                    </div>
+                </div>
+                <!-- 3 -->
+                <div class="test-card reveal">
+                    <span class="test-quote-mark">&rdquo;</span>
+                    <p data-i18n="test3">المجلس المنفصل والحديقة الخاصة كانا بالضبط ما تبحث عنه عائلتنا. فيلا أنطاليا أصبحت وجهتنا الصيفية كل عام.</p>
+                    <div class="test-person">
+                        <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=200&auto=format&fit=crop" alt="Client photo" loading="lazy">
+                        <div><b data-i18n="test3name">عائلة الصباح</b><span class="flag">🇰🇼 <span data-i18n="test3loc">الكويت</span></span></div>
+                    </div>
+                </div>
+                <!-- 4 -->
+                <div class="test-card reveal">
+                    <span class="test-quote-mark">&rdquo;</span>
+                    <p data-i18n="test4">مارينا الخليج الذهبي في إسطنبول هي تحفة حقيقية. الخدمات التي تلقيناها جعلتنا نشعر بأننا ملوك، بالتأكيد سنكرر التجربة.</p>
+                    <div class="test-person">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=200&auto=format&fit=crop" alt="Client photo" loading="lazy">
+                        <div><b data-i18n="test4name">السيد حمد آل ثاني</b><span class="flag">🇶🇦 <span data-i18n="test4loc">الدوحة، قطر</span></span></div>
+                    </div>
+                </div>
+                <!-- 5 -->
+                <div class="test-card reveal">
+                    <span class="test-quote-mark">&rdquo;</span>
+                    <p data-i18n="test5">على الرغم من أنني اشتريت أرضاً استثمارية، إلا أن وكالتكم جعلتني أشعر بأني اشتريت قصراً. الشفافية والتوجيه القانوني كانا ممتازين.</p>
+                    <div class="test-person">
+                        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=200&auto=format&fit=crop" alt="Client photo" loading="lazy">
+                        <div><b data-i18n="test5name">السيد عبدالله البحراني</b><span class="flag">🇧🇭 <span data-i18n="test5loc">المنامة، البحرين</span></span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ FOOTER ============ -->
+    <footer id="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <span class="brand-name" style="color:var(--gold-pure);font-family:var(--font-arabic);font-size:1.4rem;font-weight:700;">دار الكرامة</span>
+                    <p data-i18n="footBrandCopy">وسيط عقاري فاخر متخصص في إسطنبول وأنطاليا، بشراكة رسمية مع الحكومة التركية وغرفة التجارة العربية.</p>
+                    <div class="footer-social">
+                        <a href="#" aria-label="Instagram"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg></a>
+                        <a href="#" aria-label="YouTube"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="5" width="20" height="14" rx="4"/><path d="M10 9l5 3-5 3z"/></svg></a>
+                        <a href="#" aria-label="TikTok"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 3v12a4 4 0 11-4-4"/><path d="M12 3c1 2.5 3 4 6 4"/></svg></a>
+                        <a href="#" aria-label="WhatsApp"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 20l1.4-4A8 8 0 1112 20a8 8 0 01-4-1z"/></svg></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h5 data-i18n="footCol1">العقارات</h5>
+                    <ul>
+                        <li><a href="#" data-i18n="footCol1a">فلل إسطنبول</a></li>
+                        <li><a href="#" data-i18n="footCol1b">فلل أنطاليا</a></li>
+                        <li><a href="#" data-i18n="footCol1c">المارينا الخاصة</a></li>
+                        <li><a href="#" data-i18n="footCol1d">الأراضي الاستثمارية</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h5 data-i18n="footCol2">الشركة</h5>
+                    <ul>
+                        <li><a href="#about" data-i18n="footCol2a">من نحن</a></li>
+                        <li><a href="#vip" data-i18n="footCol2b">خدمات VIP</a></li>
+                        <li><a href="#trust" data-i18n="footCol2c">الاستثمار</a></li>
+                        <li><a href="#testimonials" data-i18n="footCol2d">قصص عملائنا</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col" id="contact">
+                    <h5 data-i18n="footCol3">تواصل معنا</h5>
+                    <ul>
+                        <li>Nişantaşı, Istanbul, Türkiye</li>
+                        <li>+90 212 000 00 00</li>
+                        <li>concierge@daralkarama.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="divider-line"></div>
+            <div class="footer-bottom">
+                <div class="footer-trust">
+                    <span data-i18n="footTrust1">✓ شريك رسمي معتمد من الحكومة التركية</span>
+                    <span data-i18n="footTrust2">✓ عضو في غرفة التجارة العربية</span>
+                </div>
+                <span>© 2026 Dar Al-Karama Real Estate</span>
+            </div>
+            <p class="thanks-line" data-i18n="footThanks">شكراً لثقتكم</p>
+        </div>
+    </footer>
+
+    <!-- ============ WHATSAPP ============ -->
+    <a class="whatsapp-float" target="_blank" rel="noopener"
+       href="https://wa.me/902120000000?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%A3%D8%B1%D9%8A%D8%AF%20%D9%85%D8%B9%D9%84%D9%88%D9%85%D8%A7%D8%AA%20%D8%B9%D9%86%20%D8%A7%D9%84%D9%81%D9%8A%D9%84%D8%A7%20%D8%A7%D9%84%D9%81%D8%A7%D8%AE%D8%B1%D8%A9"
+       aria-label="WhatsApp">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.5 2 2 6.5 2 12c0 1.9.5 3.6 1.5 5.2L2 22l4.9-1.5A9.9 9.9 0 0012 22c5.5 0 10-4.5 10-10S17.5 2 12 2zm0 18c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-2.9.9.9-2.8-.2-.3A8 8 0 1112 20zm4.4-6c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1-.2.2-.7.8-.8.9-.2.2-.3.2-.5.1-.2-.1-1-.4-1.9-1.2-.7-.6-1.2-1.4-1.3-1.6-.1-.2 0-.4.1-.5.1-.1.2-.3.4-.4.1-.1.2-.2.2-.4.1-.2 0-.3 0-.5 0-.1-.6-1.5-.8-2-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.2-.9.9-.9 2.2s1 2.6 1.1 2.8c.1.2 2 3 4.7 4.2.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.5-.1 1.5-.6 1.8-1.2.2-.6.2-1.1.1-1.2-.1-.1-.2-.2-.4-.3z"/></svg>
+    </a>
+
+    <!-- ============ BACK TO TOP ============ -->
+    <button class="back-top" id="backTop" aria-label="Back to top">↑</button>
+
+    <script>
+        // ============================================================
+        // 1. TRANSLATIONS – (Fiyat ve vatandaşlık vurgusu kaldırıldı)
+        // ============================================================
+        const translations = {
+            ar: {
+                navAbout: "من نحن",
+                nav1: "العقارات",
+                nav2: "لماذا تركيا",
+                nav3: "خدمات VIP",
+                nav4: "الاستثمار",
+                nav5: "تواصل",
+                navCta: "جولة VIP",
+                heroTitle: "ثقة وجودة في عقارات إسطنبول وأنطاليا",
+                heroSubMain: "حيث الفخامة تلتقي بالبحر الأبيض المتوسط",
+                heroSubSecondary: "Premium villas, private marinas & estates for the region's most distinguished families.",
+                heroBtn1: "احجز جولتك المجانية",
+                heroBtn2: "تصفح العقارات",
+                stat1: "عقار تم تسليمه",
+                stat2: "سنة خبرة",
+                stat3: "شفافية قانونية",
+                stat4: "دعم متواصل",
+                scrollCue: "اكتشف المزيد",
+                scarcityBannerText: "عدد محدود من العقارات المتاحة هذا الموسم — فرص استثمارية نادرة",
+                aboutEyebrow: "من نحن",
+                aboutTitle: "شريككم الموثوق في تركيا",
+                aboutSub: "Your trusted partner in Turkey",
+                aboutCopy: "دار الكرامة ليست مجرد وكالة عقارية؛ بل هي الجسر الذي يربط العائلات العربية المميزة بأرقى العقارات في تركيا. بفضل اعتمادنا الرسمي من الحكومة التركية وغرفة التجارة العربية، نقدم تجربة سلسة وشفافة وملكية. فريقنا من الخبراء متعددي اللغات يتولى كل التفاصيل — بدءاً من الإجراءات القانونية وصولاً إلى الجولات الشخصية VIP — ليضمن أن تكون رحلتكم لامتلاك قطعة من الجنة في إسطنبول أو أنطاليا على قدر من الكرامة.",
+                badgeTrust1: "شريك رسمي معتمد من الحكومة التركية",
+                badgeTrust2: "عضو في غرفة التجارة العربية",
+                badgeTrust3: "خبراء في الإجراءات القانونية",
+                whyEyebrow: "لماذا تركيا",
+                whyTitle: "بيئة استثمارية شفافة ومدعومة حكومياً",
+                whySub: "A transparent, state-backed investment environment",
+                why1Title: "دعم قانوني كامل",
+                why1Copy: "نقدم لك استشارات قانونية شفافة ومتابعة كاملة لإجراءات الملكية والإقامة، دون أي رسوم خفية.",
+                why2Title: "إقامة ميسرة",
+                why2Copy: "إجراءات إقامة واضحة وسريعة للمستثمر وعائلته، مع دعم كامل من فريقنا المتخصص.",
+                why3Title: "شفافية ضريبية",
+                why3Copy: "نظام ضريبي واضح ومزايا للمشترين الأجانب، مع توضيح كامل لجميع التكاليف.",
+                why4Title: "موقع استراتيجي",
+                why4Copy: "ساعات معدودة من دبي والرياض والكويت، وبوابة مباشرة بين الخليج وأوروبا.",
+                propEyebrow: "مختارات دار الكرامة",
+                propTitle: "عقارات فاخرة في إسطنبول وأنطاليا",
+                propSub: "A curated portfolio of villas, marinas & estates",
+                filterAll: "الكل",
+                filterAllTypes: "جميع الأنواع",
+                typeVilla: "فيلا",
+                typeMarina: "مارينا",
+                typeLand: "أرض",
+                cityIstanbul: "إسطنبول",
+                cityAntalya: "أنطاليا",
+                propMoreBtn: "عرض جميع العقارات (48)",
+                trustEyebrow: "ثقة موثقة",
+                trustTitle: "شراكة رسمية، وضمانات حكومية",
+                trustSub: "Certified, licensed, and backed by official partnerships",
+                badge1: "استثمار آمن",
+                badge2: "ترخيص رسمي",
+                badge3: "دعم حكومي",
+                badge4: "جودة مضمونة",
+                badge4sub: "Quality Guaranteed",
+                investTitle: "استثمار عقاري شفاف",
+                investCopy: "جميع معاملاتنا تتم بشفافية تامة، مع عقود موثقة قانونياً وحماية كاملة لحقوقك. نقدم لك استشارات مجانية قبل أي التزام.",
+                payTitle: "مرونة في الدفع",
+                payHeadline: "خيارات دفع متعددة تناسب احتياجاتك",
+                payCopy: "نوفر لعملائنا من كبار المستثمرين مرونة تامة في طرق السداد، بما يشمل التحويل البنكي الدولي، والسبائك الذهبية، والعملات الرقمية الموثوقة.",
+                majlisEyebrow: "الضيافة العربية",
+                majlisTitle: "صممت خصيصاً للعائلات العربية",
+                majlisSub: "Designed specifically for Arab families",
+                majlisCopy: "مجالس واسعة، أجنحة منفصلة للرجال والنساء، ومطابخ كبيرة تتسع لاجتماعات العائلة — كل تفصيل صُمم حول تقاليد الضيافة الخليجية.",
+                maj1b: "خصوصية تامة",
+                maj1s: "بوابات خاصة وجدران عازلة للنظر",
+                maj2b: "مسبح خاص",
+                maj2s: "داخلي وخارجي في كل فيلا",
+                maj3b: "حديقة خاصة",
+                maj3s: "مساحات خضراء محاطة بأسوار",
+                maj4b: "مجالس منفصلة",
+                maj4s: "أجنحة مستقلة للرجال والنساء",
+                vipEyebrow: "خدمة كونسيرج VIP",
+                vipTitle: "نحن في خدمتكم 24 ساعة",
+                vipSub: "We are at your service, 24 hours a day",
+                vip1Title: "طيران خاص",
+                vip1Copy: "رحلة خاصة من دبي أو إسطنبول عند زيارتكم لمعاينة العقار.",
+                vip2Title: "إقامة 7 نجوم",
+                vip2Copy: "إقامة في أرقى الفنادق خلال فترة البحث والمعاينة.",
+                vip3Title: "مترجم شخصي",
+                vip3Copy: "مترجم عربي مرافق طوال الزيارة والإجراءات القانونية.",
+                vip4Title: "سيارة مع سائق",
+                vip4Copy: "مرسيدس أو بنتلي مع سائق خاص طوال إقامتكم.",
+                vipPhrase: "نحن في خدمتكم 24 ساعة",
+                vipCta: "تحدث مع مستشارك الشخصي",
+                testEyebrow: "قالوا عنا",
+                testTitle: "عائلات وثقت بدار الكرامة",
+                testSub: "Families who trusted Dar Al-Karama with their new home",
+                test1: "منذ اللحظة الأولى شعرنا أننا في بيتنا. الفيلا في بيبك تفوق كل توقعاتنا، والفريق تعامل معنا بخصوصية واحترام تام.",
+                test1name: "عائلة الفلاسي",
+                test1loc: "دبي، الإمارات",
+                test2: "إجراءات الملكية تمّت بسلاسة تامة، وخدمة الكونسيرج أرسلت لنا سيارة ومترجم من أول يوم وصلنا فيه إسطنبول.",
+                test2name: "الأستاذ خالد العتيبي",
+                test2loc: "الرياض، السعودية",
+                test3: "المجلس المنفصل والحديقة الخاصة كانا بالضبط ما تبحث عنه عائلتنا. فيلا أنطاليا أصبحت وجهتنا الصيفية كل عام.",
+                test3name: "عائلة الصباح",
+                test3loc: "الكويت",
+                test4: "مارينا الخليج الذهبي في إسطنبول هي تحفة حقيقية. الخدمات التي تلقيناها جعلتنا نشعر بأننا ملوك، بالتأكيد سنكرر التجربة.",
+                test4name: "السيد حمد آل ثاني",
+                test4loc: "الدوحة، قطر",
+                test5: "على الرغم من أنني اشتريت أرضاً استثمارية، إلا أن وكالتكم جعلتني أشعر بأني اشتريت قصراً. الشفافية والتوجيه القانوني كانا ممتازين.",
+                test5name: "السيد عبدالله البحراني",
+                test5loc: "المنامة، البحرين",
+                footBrandCopy: "وسيط عقاري فاخر متخصص في إسطنبول وأنطاليا، بشراكة رسمية مع الحكومة التركية وغرفة التجارة العربية.",
+                footCol1: "العقارات",
+                footCol1a: "فلل إسطنبول",
+                footCol1b: "فلل أنطاليا",
+                footCol1c: "المارينا الخاصة",
+                footCol1d: "الأراضي الاستثمارية",
+                footCol2: "الشركة",
+                footCol2a: "من نحن",
+                footCol2b: "خدمات VIP",
+                footCol2c: "الاستثمار",
+                footCol2d: "قصص عملائنا",
+                footCol3: "تواصل معنا",
+                footTrust1: "✓ شريك رسمي معتمد من الحكومة التركية",
+                footTrust2: "✓ عضو في غرفة التجارة العربية",
+                footThanks: "شكراً لثقتكم",
+                badgeExclusive: "خاص",
+                callNow: "اتصل الآن",
+                tour3d: "جولة 3D",
+                bedsLabel: "غرف",
+                unitsLeft: "وحدات متبقية فقط",
+                noResults: "لا توجد عقارات مطابقة لهذا الفلتر حالياً.",
+                whatsappMsg: "السلام عليكم، أريد معلومات عن ",
+                p1title: "فيلا الأميرة البوسفورية",
+                p1loc: "بيبك، إسطنبول",
+                p1feat: "مسبح خاص",
+                p2title: "فيلا اللؤلؤة المتوسطية",
+                p2loc: "كاليجاري، أنطاليا",
+                p2feat: "حديقة خاصة",
+                p3title: "مارينا الخليج الذهبي",
+                p3loc: "سارييار، إسطنبول",
+                p3feat: "رصيف خاص لليخوت",
+                p4title: "أرض استثمارية إطلالة بحرية",
+                p4loc: "بيليك، أنطاليا",
+                p4feat: "إطلالة بانورامية",
+                p5title: "قصر الأناقة العثمانية",
+                p5loc: "بشكتاش، إسطنبول",
+                p5feat: "مجلس رجال ونساء منفصل",
+                p6title: "فيلا الواحة الذهبية",
+                p6loc: "كونيالتي، أنطاليا",
+                p6feat: "مسبح داخلي وخارجي",
+                typeLabelVilla: "فيلا",
+                typeLabelMarina: "مارينا",
+                typeLabelLand: "أرض"
+            },
+            en: {
+                navAbout: "About Us",
+                nav1: "Properties",
+                nav2: "Why Turkey",
+                nav3: "VIP Services",
+                nav4: "Investment",
+                nav5: "Contact",
+                navCta: "VIP Tour",
+                heroTitle: "Quality & Trust in Istanbul & Antalya Real Estate",
+                heroSubMain: "Where luxury meets the Mediterranean",
+                heroSubSecondary: "Premium villas, private marinas & estates for the region's most distinguished families.",
+                heroBtn1: "Book Your Free Tour",
+                heroBtn2: "Browse Properties",
+                stat1: "Properties delivered",
+                stat2: "Years of experience",
+                stat3: "Legal transparency",
+                stat4: "24/7 support",
+                scrollCue: "Discover more",
+                scarcityBannerText: "Limited properties available this season — rare investment opportunities",
+                aboutEyebrow: "Who We Are",
+                aboutTitle: "Your Trusted Partner in Turkey",
+                aboutSub: "Your trusted partner in Turkey",
+                aboutCopy: "Dar Al-Karama is not just a real estate agency; it is the bridge between distinguished Arab families and the most prestigious properties in Turkey. With official accreditation from the Turkish government and the Arab Chamber of Commerce, we provide a seamless, transparent, and royal experience. Our team of multilingual experts handles every detail—from legal procedures to personalized VIP tours—ensuring your journey to owning a piece of paradise in Istanbul or Antalya is as dignified as you are.",
+                badgeTrust1: "Official Turkish Government Partner",
+                badgeTrust2: "Arab Chamber of Commerce Member",
+                badgeTrust3: "Legal Process Experts",
+                whyEyebrow: "Why Turkey",
+                whyTitle: "A transparent, state-backed investment environment",
+                whySub: "A transparent, state-backed investment environment",
+                why1Title: "Full Legal Support",
+                why1Copy: "We provide transparent legal consultations and complete follow-up on property and residency procedures, with no hidden fees.",
+                why2Title: "Streamlined Residency",
+                why2Copy: "Clear and fast residency procedures for the investor and family, with full support from our specialized team.",
+                why3Title: "Tax Transparency",
+                why3Copy: "A clear tax system with advantages for foreign buyers, with full disclosure of all costs.",
+                why4Title: "Strategic Location",
+                why4Copy: "Hours from Dubai, Riyadh and Kuwait, a direct gateway between the Gulf and Europe.",
+                propEyebrow: "Dar Al-Karama Selection",
+                propTitle: "Luxury Estates in Istanbul & Antalya",
+                propSub: "A curated portfolio of villas, marinas & estates",
+                filterAll: "All",
+                filterAllTypes: "All Types",
+                typeVilla: "Villa",
+                typeMarina: "Marina",
+                typeLand: "Land",
+                cityIstanbul: "Istanbul",
+                cityAntalya: "Antalya",
+                propMoreBtn: "View all properties (48)",
+                trustEyebrow: "Verified Trust",
+                trustTitle: "An official partnership, backed by government guarantees",
+                trustSub: "Certified, licensed, and backed by official partnerships",
+                badge1: "Secure Investment",
+                badge2: "Official License",
+                badge3: "Government Support",
+                badge4: "Quality Guaranteed",
+                badge4sub: "Quality Guaranteed",
+                investTitle: "Transparent Real Estate Investment",
+                investCopy: "All our transactions are conducted with complete transparency, with legally notarized contracts and full protection of your rights. We offer free consultations before any commitment.",
+                payTitle: "Flexible Payment",
+                payHeadline: "Multiple payment options to suit your needs",
+                payCopy: "We offer our high-net-worth clients complete flexibility in payment methods, including international wire transfer, gold bullion, and trusted digital currencies.",
+                majlisEyebrow: "Arab Hospitality",
+                majlisTitle: "Designed specifically for Arab families",
+                majlisSub: "Designed specifically for Arab families",
+                majlisCopy: "Spacious majlis lounges, separate wings for men and women, and large kitchens built for family gatherings — every detail shaped around Gulf hospitality traditions.",
+                maj1b: "Complete Privacy",
+                maj1s: "Private gates and sight-shielding walls",
+                maj2b: "Private Pool",
+                maj2s: "Indoor and outdoor in every villa",
+                maj3b: "Private Garden",
+                maj3s: "Walled green spaces",
+                maj4b: "Separate Majlis Areas",
+                maj4s: "Independent wings for men and women",
+                vipEyebrow: "VIP Concierge Service",
+                vipTitle: "We are at your service, 24 hours a day",
+                vipSub: "We are at your service, 24 hours a day",
+                vip1Title: "Private Jet",
+                vip1Copy: "A private flight from Dubai or Istanbul when you visit to view the property.",
+                vip2Title: "7-Star Stay",
+                vip2Copy: "Accommodation at the finest hotels during your search and viewings.",
+                vip3Title: "Personal Translator",
+                vip3Copy: "An Arabic-speaking translator accompanying you throughout the visit and legal process.",
+                vip4Title: "Chauffeured Car",
+                vip4Copy: "A Mercedes or Bentley with a private driver for the duration of your stay.",
+                vipPhrase: "We are at your service, 24 hours a day",
+                vipCta: "Speak with your personal advisor",
+                testEyebrow: "What They Say",
+                testTitle: "Families who trusted Dar Al-Karama",
+                testSub: "Families who trusted Dar Al-Karama with their new home",
+                test1: "From the very first moment we felt at home. The villa in Bebek exceeded every expectation, and the team treated us with complete privacy and respect.",
+                test1name: "The Al Falasi Family",
+                test1loc: "Dubai, UAE",
+                test2: "The property procedures were completely seamless, and the concierge team sent a car and translator from the day we landed in Istanbul.",
+                test2name: "Mr. Khalid Al-Otaibi",
+                test2loc: "Riyadh, Saudi Arabia",
+                test3: "The separate majlis and private garden were exactly what our family needed. Our Antalya villa has become our summer destination every year.",
+                test3name: "The Al-Sabah Family",
+                test3loc: "Kuwait",
+                test4: "The Golden Bay Marina in Istanbul is a true masterpiece. The services we received made us feel like royalty, we will definitely repeat the experience.",
+                test4name: "Mr. Hamad Al Thani",
+                test4loc: "Doha, Qatar",
+                test5: "Even though I purchased an investment land, your agency made me feel like I bought a palace. The transparency and legal guidance were excellent.",
+                test5name: "Mr. Abdullah Al-Bahrani",
+                test5loc: "Manama, Bahrain",
+                footBrandCopy: "A luxury real estate brokerage specializing in Istanbul and Antalya, in official partnership with the Turkish government and the Arab Chamber of Commerce.",
+                footCol1: "Properties",
+                footCol1a: "Istanbul Villas",
+                footCol1b: "Antalya Villas",
+                footCol1c: "Private Marinas",
+                footCol1d: "Investment Land",
+                footCol2: "Company",
+                footCol2a: "About Us",
+                footCol2b: "VIP Services",
+                footCol2c: "Investment",
+                footCol2d: "Client Stories",
+                footCol3: "Contact Us",
+                footTrust1: "✓ Official Turkish Government Partner",
+                footTrust2: "✓ Arab Chamber of Commerce Member",
+                footThanks: "Thank you for your trust",
+                badgeExclusive: "Exclusive",
+                callNow: "Call Now",
+                tour3d: "3D Tour",
+                bedsLabel: "beds",
+                unitsLeft: "units remaining only",
+                noResults: "No properties match this filter right now.",
+                whatsappMsg: "Hello, I would like information about ",
+                p1title: "Bosphorus Princess Villa",
+                p1loc: "Bebek, Istanbul",
+                p1feat: "Private pool",
+                p2title: "Mediterranean Pearl Villa",
+                p2loc: "Kalkan, Antalya",
+                p2feat: "Private garden",
+                p3title: "Golden Bay Marina Residence",
+                p3loc: "Sarıyer, Istanbul",
+                p3feat: "Private yacht berth",
+                p4title: "Sea-View Investment Plot",
+                p4loc: "Belek, Antalya",
+                p4feat: "Panoramic sea view",
+                p5title: "Ottoman Elegance Estate",
+                p5loc: "Beşiktaş, Istanbul",
+                p5feat: "Separate men's & women's majlis",
+                p6title: "Golden Oasis Villa",
+                p6loc: "Konyaaltı, Antalya",
+                p6feat: "Indoor & outdoor pool",
+                typeLabelVilla: "Villa",
+                typeLabelMarina: "Marina",
+                typeLabelLand: "Land"
+            },
+            tr: {
+                navAbout: "Hakkımızda",
+                nav1: "Emlaklar",
+                nav2: "Neden Türkiye",
+                nav3: "VIP Hizmetler",
+                nav4: "Yatırım",
+                nav5: "İletişim",
+                navCta: "VIP Tur",
+                heroTitle: "İstanbul ve Antalya'da Kalite ve Güven",
+                heroSubMain: "Lüksün Akdeniz ile buluştuğu yer",
+                heroSubSecondary: "Premium villalar, özel marinalar ve bölgenin en seçkin ailelerine özel mülkler.",
+                heroBtn1: "Ücretsiz Turunuzu Ayırtın",
+                heroBtn2: "Emlakları Görüntüle",
+                stat1: "Teslim edilen mülk",
+                stat2: "Yıllık tecrübe",
+                stat3: "Yasal şeffaflık",
+                stat4: "7/24 destek",
+                scrollCue: "Daha fazlasını keşfedin",
+                scarcityBannerText: "Bu sezon sınırlı sayıda mülk — nadir yatırım fırsatları",
+                aboutEyebrow: "Biz Kimiz",
+                aboutTitle: "Türkiye'de Güvenilir Ortağınız",
+                aboutSub: "Your trusted partner in Turkey",
+                aboutCopy: "Dar Al-Karama sadece bir gayrimenkul acentesi değil; seçkin Arap aileleri ile Türkiye'nin en prestijli mülkleri arasında bir köprüdür. Türk hükümeti ve Arap Ticaret Odası'ndan resmi akreditasyonumuzla, kesintisiz, şeffaf ve kraliyete yakışır bir deneyim sunuyoruz. Çok dilli uzman ekibimiz, yasal prosedürlerden kişiselleştirilmiş VIP turlara kadar her ayrıntıyı ele alır; İstanbul veya Antalya'da cennetten bir parçaya sahip olma yolculuğunuzun sizin kadar asil olmasını sağlar.",
+                badgeTrust1: "Resmi Türk Hükümeti Ortağı",
+                badgeTrust2: "Arap Ticaret Odası Üyesi",
+                badgeTrust3: "Hukuki Süreç Uzmanları",
+                whyEyebrow: "Neden Türkiye",
+                whyTitle: "Şeffaf ve devlet destekli yatırım ortamı",
+                whySub: "A transparent, state-backed investment environment",
+                why1Title: "Tam Hukuki Destek",
+                why1Copy: "Şeffaf hukuki danışmanlık ve mülkiyet ile ikamet işlemlerinde gizli ücret olmadan tam takip sunuyoruz.",
+                why2Title: "Kolay İkamet",
+                why2Copy: "Yatırımcı ve ailesi için net ve hızlı ikamet işlemleri, uzman ekibimizle tam destek.",
+                why3Title: "Vergi Şeffaflığı",
+                why3Copy: "Yabancı alıcılar için avantajlı ve tüm maliyetlerin açıklandığı şeffaf vergi sistemi.",
+                why4Title: "Stratejik Konum",
+                why4Copy: "Dubai, Riyad ve Kuveyt'e saatler, Körfez ile Avrupa arasında doğrudan bir kapı.",
+                propEyebrow: "Dar Al-Karama Seçkisi",
+                propTitle: "İstanbul ve Antalya'da Lüks Mülkler",
+                propSub: "Villalar, marinalar ve arazilerden oluşan özenle seçilmiş bir portföy",
+                filterAll: "Tümü",
+                filterAllTypes: "Tüm Türler",
+                typeVilla: "Villa",
+                typeMarina: "Marina",
+                typeLand: "Arsa",
+                cityIstanbul: "İstanbul",
+                cityAntalya: "Antalya",
+                propMoreBtn: "Tüm mülkleri görüntüle (48)",
+                trustEyebrow: "Belgelenmiş Güven",
+                trustTitle: "Resmi ortaklık, devlet güvenceli",
+                trustSub: "Onaylı, lisanslı ve resmi ortaklıklarla desteklenmiştir",
+                badge1: "Güvenli Yatırım",
+                badge2: "Resmi Lisans",
+                badge3: "Devlet Desteği",
+                badge4: "Kalite Garantili",
+                badge4sub: "Quality Guaranteed",
+                investTitle: "Şeffaf Gayrimenkul Yatırımı",
+                investCopy: "Tüm işlemlerimiz tam şeffaflıkla, yasal olarak noter onaylı sözleşmelerle ve haklarınızın tam korumasıyla gerçekleştirilir. Herhangi bir taahhüt öncesi ücretsiz danışmanlık sunuyoruz.",
+                payTitle: "Esnek Ödeme",
+                payHeadline: "İhtiyaçlarınıza uygun çoklu ödeme seçenekleri",
+                payCopy: "Yüksek net değerli müşterilerimize uluslararası havaleler, külçe altın ve güvenilir kripto para birimleri dahil tam ödeme esnekliği sunuyoruz.",
+                majlisEyebrow: "Arap Misafirperverliği",
+                majlisTitle: "Özellikle Arap aileleri için tasarlandı",
+                majlisSub: "Özellikle Arap aileleri için tasarlandı",
+                majlisCopy: "Geniş meclis salonları, erkekler ve kadınlar için ayrı bölümler ve büyük mutfaklar — her detay Körfez misafirperverliği geleneği etrafında tasarlandı.",
+                maj1b: "Tam Mahremiyet",
+                maj1s: "Özel kapılar ve görüşü engelleyen duvarlar",
+                maj2b: "Özel Havuz",
+                maj2s: "Her villada iç ve dış mekan havuzu",
+                maj3b: "Özel Bahçe",
+                maj3s: "Duvarlarla çevrili yeşil alanlar",
+                maj4b: "Ayrı Meclis Alanları",
+                maj4s: "Erkekler ve kadınlar için bağımsız bölümler",
+                vipEyebrow: "VIP Konsiyerj Hizmeti",
+                vipTitle: "7/24 hizmetinizdeyiz",
+                vipSub: "Günün her saati hizmetinizdeyiz",
+                vip1Title: "Özel Jet",
+                vip1Copy: "Mülkü incelemek için ziyaretinizde Dubai veya İstanbul'dan özel uçuş.",
+                vip2Title: "7 Yıldızlı Konaklama",
+                vip2Copy: "Arama ve inceleme sürecinde en seçkin otellerde konaklama.",
+                vip3Title: "Kişisel Tercüman",
+                vip3Copy: "Ziyaret ve yasal işlemler boyunca eşlik eden Arapça konuşan tercüman.",
+                vip4Title: "Şoförlü Araç",
+                vip4Copy: "Konaklamanız boyunca özel şoförlü Mercedes veya Bentley.",
+                vipPhrase: "7/24 hizmetinizdeyiz",
+                vipCta: "Kişisel danışmanınızla görüşün",
+                testEyebrow: "Bizim Hakkımızda",
+                testTitle: "Dar Al-Karama'ya güvenen aileler",
+                testSub: "Yeni evlerinde Dar Al-Karama'ya güvenen aileler",
+                test1: "Daha ilk andan itibaren kendimizi evimizde hissettik. Bebek'teki villa tüm beklentilerimizin ötesindeydi ve ekip bize tam bir mahremiyet ve saygıyla yaklaştı.",
+                test1name: "Al Falasi Ailesi",
+                test1loc: "Dubai, BAE",
+                test2: "Mülkiyet işlemleri son derece sorunsuz ilerledi; konsiyerj ekibi ilk günden itibaren araç ve tercüman gönderdi.",
+                test2name: "Sayın Halid El-Uteybi",
+                test2loc: "Riyad, Suudi Arabistan",
+                test3: "Ayrı meclis ve özel bahçe tam olarak ailemizin aradığı şeydi. Antalya villamız artık yaz destinasyonumuz.",
+                test3name: "El-Sabah Ailesi",
+                test3loc: "Kuveyt",
+                test4: "İstanbul'daki Altın Koy Marina gerçek bir başyapıt. Aldığımız hizmetler bizi kral gibi hissettirdi, kesinlikle deneyimi tekrarlayacağız.",
+                test4name: "Sayın Hamad Al Thani",
+                test4loc: "Doha, Katar",
+                test5: "Yatırımlık bir arazi satın almama rağmen, acenteniz bana bir saray satın almış gibi hissettirdi. Şeffaflık ve yasal rehberlik mükemmeldi.",
+                test5name: "Sayın Abdullah Al-Bahrani",
+                test5loc: "Manama, Bahreyn",
+                footBrandCopy: "Türk hükümeti ve Arap Ticaret Odası ile resmi ortaklığa sahip, İstanbul ve Antalya'da uzmanlaşmış lüks gayrimenkul danışmanlığı.",
+                footCol1: "Mülkler",
+                footCol1a: "İstanbul Villaları",
+                footCol1b: "Antalya Villaları",
+                footCol1c: "Özel Marinalar",
+                footCol1d: "Yatırımlık Arsalar",
+                footCol2: "Şirket",
+                footCol2a: "Hakkımızda",
+                footCol2b: "VIP Hizmetler",
+                footCol2c: "Yatırım",
+                footCol2d: "Müşteri Hikayeleri",
+                footCol3: "Bize Ulaşın",
+                footTrust1: "✓ Resmi Türk Hükümeti Ortağı",
+                footTrust2: "✓ Arap Ticaret Odası Üyesi",
+                footThanks: "Güveniniz için teşekkür ederiz",
+                badgeExclusive: "Özel",
+                callNow: "Şimdi Ara",
+                tour3d: "3D Tur",
+                bedsLabel: "oda",
+                unitsLeft: "ünite kaldı",
+                noResults: "Bu filtreye uyan mülk bulunamadı.",
+                whatsappMsg: "Merhaba, şu mülk hakkında bilgi almak istiyorum: ",
+                p1title: "Boğaziçi Prenses Villası",
+                p1loc: "Bebek, İstanbul",
+                p1feat: "Özel havuz",
+                p2title: "Akdeniz İncisi Villa",
+                p2loc: "Kalkan, Antalya",
+                p2feat: "Özel bahçe",
+                p3title: "Altın Koy Marina Rezidansı",
+                p3loc: "Sarıyer, İstanbul",
+                p3feat: "Özel yat rıhtımı",
+                p4title: "Deniz Manzaralı Yatırımlık Arsa",
+                p4loc: "Belek, Antalya",
+                p4feat: "Panoramik deniz manzarası",
+                p5title: "Osmanlı Zarafeti Konağı",
+                p5loc: "Beşiktaş, İstanbul",
+                p5feat: "Ayrı erkek ve kadın meclisi",
+                p6title: "Altın Vaha Villası",
+                p6loc: "Konyaaltı, Antalya",
+                p6feat: "İç ve dış mekan havuzu",
+                typeLabelVilla: "Villa",
+                typeLabelMarina: "Marina",
+                typeLabelLand: "Arsa"
+            }
+        };
+
+        let currentLang = 'ar';
+
+        function applyTranslations() {
+            const dict = translations[currentLang];
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                if (dict[key] !== undefined) el.textContent = dict[key];
+            });
+        }
+
+        document.querySelectorAll('.lang-switch button').forEach(btn => {
+            btn.addEventListener('click', () => {
+                document.querySelectorAll('.lang-switch button').forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                currentLang = btn.dataset.lang;
+                if (currentLang === 'ar') {
+                    document.documentElement.setAttribute('dir', 'rtl');
+                    document.documentElement.setAttribute('lang', 'ar');
+                } else {
+                    document.documentElement.setAttribute('dir', 'ltr');
+                    document.documentElement.setAttribute('lang', currentLang);
+                }
+                applyTranslations();
+                renderProperties();
+            });
+        });
+
+        // ============================================================
+        // 2. MOBILE MENU
+        // ============================================================
+        const mobileToggle = document.getElementById('mobileToggle');
+        const mobileOverlay = document.getElementById('mobileNavOverlay');
+        const closeMobile = document.getElementById('closeMobile');
+
+        function toggleMobile(open) {
+            if (open) {
+                mobileOverlay.classList.add('open');
+                document.body.style.overflow = 'hidden';
+            } else {
+                mobileOverlay.classList.remove('open');
+                document.body.style.overflow = '';
+            }
+        }
+        mobileToggle.addEventListener('click', () => toggleMobile(true));
+        closeMobile.addEventListener('click', () => toggleMobile(false));
+        mobileOverlay.addEventListener('click', (e) => { if (e.target === mobileOverlay) toggleMobile(false); });
+        document.querySelectorAll('.mobile-nav-overlay a').forEach(a => {
+            a.addEventListener('click', () => toggleMobile(false));
+        });
+
+        // ============================================================
+        // 3. HEADER SCROLL & BACK TOP
+        // ============================================================
+        const header = document.getElementById('siteHeader');
+        const backTop = document.getElementById('backTop');
+        window.addEventListener('scroll', () => {
+            header.classList.toggle('scrolled', window.scrollY > 40);
+            backTop.classList.toggle('visible', window.scrollY > 600);
+        });
+        backTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+        // ============================================================
+        // 4. CURSOR GLOW
+        // ============================================================
+        const glowEl = document.getElementById('cursorGlow');
+        if (window.innerWidth > 780) {
+            glowEl.style.display = 'block';
+            window.addEventListener('mousemove', (e) => {
+                glowEl.style.left = e.clientX + 'px';
+                glowEl.style.top = e.clientY + 'px';
+            });
+        }
+
+        // ============================================================
+        // 5. GOLD PARTICLES
+        // ============================================================
+        const pWrap = document.getElementById('particles');
+        for (let i = 0; i < 30; i++) {
+            const p = document.createElement('i');
+            p.style.left = Math.random() * 100 + '%';
+            p.style.bottom = (Math.random() * 40) + '%';
+            p.style.animationDelay = (Math.random() * 10) + 's';
+            p.style.animationDuration = (8 + Math.random() * 6) + 's';
+            p.style.width = (2 + Math.random() * 4) + 'px';
+            p.style.height = p.style.width;
+            pWrap.appendChild(p);
+        }
+
+        // ============================================================
+        // 6. REVEAL ON SCROLL
+        // ============================================================
+        const revealEls = document.querySelectorAll('.reveal');
+        const revealIO = new IntersectionObserver((entries) => {
+            entries.forEach(e => {
+                if (e.isIntersecting) { e.target.classList.add('is-visible');
+                    revealIO.unobserve(e.target); }
+            });
+        }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+        revealEls.forEach(el => revealIO.observe(el));
+
+        // ============================================================
+        // 7. PROPERTIES
+        // ============================================================
+        const propertyBase = [
+            { id: 'p1', city: 'istanbul', type: 'villa', beds: 6, usd: 4200000, unitsLeft: 1,
+                img: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=900&auto=format&fit=crop' },
+            { id: 'p2', city: 'antalya', type: 'villa', beds: 5, usd: 2850000, unitsLeft: 2,
+                img: 'https://images.unsplash.com/photo-1613490493576-7fde63acd811?q=80&w=900&auto=format&fit=crop' },
+            { id: 'p3', city: 'istanbul', type: 'marina', beds: 4, usd: 5600000, unitsLeft: 1,
+                img: 'https://images.unsplash.com/photo-1523217582562-09d0def993a6?q=80&w=900&auto=format&fit=crop' },
+            { id: 'p4', city: 'antalya', type: 'land', beds: 0, usd: 1200000, unitsLeft: 3,
+                img: 'https://images.unsplash.com/photo-1500382017468-9049fed747ef?q=80&w=900&auto=format&fit=crop' },
+            { id: 'p5', city: 'istanbul', type: 'villa', beds: 7, usd: 6900000, unitsLeft: 1,
+                img: 'https://images.unsplash.com/photo-1613977257363-707ba9348227?q=80&w=900&auto=format&fit=crop' },
+            { id: 'p6', city: 'antalya', type: 'villa', beds: 5, usd: 3300000, unitsLeft: 2,
+                img: 'https://images.unsplash.com/photo-1613553507747-5f8d62ad5904?q=80&w=900&auto=format&fit=crop' }
+        ];
+
+        const rates = { USD: 1, TRY: 34.2, AED: 3.67, SAR: 3.75, QAR: 3.64, KWD: 0.307 };
+        const symbols = { USD: '$', TRY: '₺', AED: 'د.إ', SAR: 'ر.س', QAR: 'ر.ق', KWD: 'د.ك' };
+        let activeCity = 'all',
+            activeType = 'all',
+            activeCurrency = 'USD';
+
+        function formatPrice(usd) {
+            const val = usd * rates[activeCurrency];
+            const rounded = activeCurrency === 'KWD' ? val.toFixed(0) : Math.round(val).toLocaleString('en-US');
+            return `${symbols[activeCurrency]} ${rounded}`;
+        }
+
+        function typeLabelFor(type) {
+            const d = translations[currentLang];
+            return type === 'villa' ? d.typeLabelVilla : type === 'marina' ? d.typeLabelMarina : d.typeLabelLand;
+        }
+
+        function cityLabelFor(city) {
+            return translations[currentLang][city === 'istanbul' ? 'cityIstanbul' : 'cityAntalya'];
+        }
+
+        function renderProperties() {
+            const dict = translations[currentLang];
+            const grid = document.getElementById('propertyGrid');
+            grid.innerHTML = '';
+            const filtered = propertyBase.filter(p =>
+                (activeCity === 'all' || p.city === activeCity) &&
+                (activeType === 'all' || p.type === activeType)
+            );
+            if (filtered.length === 0) {
+                grid.innerHTML =
+                    `<p style="grid-column:1/-1;text-align:center;color:#8a7a63;padding:40px 0;">${dict.noResults}</p>`;
+                return;
+            }
+            filtered.forEach(p => {
+                const titleAr = dict[p.id + 'title'];
+                const loc = dict[p.id + 'loc'];
+                const feat = dict[p.id + 'feat'];
+                const card = document.createElement('div');
+                card.className = 'property-card reveal is-visible';
+                card.innerHTML = `
+                            <div class="card-media">
+                                <img src="${p.img}" alt="${titleAr}" loading="lazy">
+                                <span class="ribbon">${dict.badgeExclusive}</span>
+                                <span class="scarcity-tag">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L4 14h6l-1 8 9-12h-6l1-8z"/></svg>
+                                    ${p.unitsLeft} ${dict.unitsLeft}
+                                </span>
+                                <span class="card-3d">
+                                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M21 8V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2h14a2 2 0 002-2v-2"/><path d="M12 12l9-5M12 12l-9-5M12 12v9"/></svg>
+                                    ${dict.tour3d}
+                                </span>
+                            </div>
+                            <div class="card-body">
+                                <p class="card-loc">${loc}</p>
+                                <h3 class="card-title-ar">${titleAr}</h3>
+                                <div class="card-features">
+                                    ${p.beds ? `<span>🛏 ${p.beds} ${dict.bedsLabel}</span>` : ''}
+                                    <span>◆ ${feat}</span>
+                                </div>
+                                <div class="card-price-row">
+                                    <div>
+                                        <div class="price-main">${formatPrice(p.usd)}</div>
+                                        <div class="price-sub">${typeLabelFor(p.type)} · ${cityLabelFor(p.city)}</div>
+                                    </div>
+                                    <a class="card-cta" target="_blank" rel="noopener"
+                                       href="https://wa.me/902120000000?text=${encodeURIComponent(dict.whatsappMsg+titleAr)}">
+                                       ${dict.callNow}
+                                    </a>
+                                </div>
+                            </div>`;
+                grid.appendChild(card);
+            });
+        }
+
+        document.getElementById('cityFilters').addEventListener('click', (e) => {
+            if (e.target.tagName !== 'BUTTON') return;
+            document.querySelectorAll('#cityFilters .chip').forEach(c => c.classList.remove('active'));
+            e.target.classList.add('active');
+            activeCity = e.target.dataset.city;
+            renderProperties();
+        });
+        document.getElementById('typeFilters').addEventListener('click', (e) => {
+            if (e.target.tagName !== 'BUTTON') return;
+            document.querySelectorAll('#typeFilters .chip').forEach(c => c.classList.remove('active'));
+            e.target.classList.add('active');
+            activeType = e.target.dataset.type;
+            renderProperties();
+        });
+        document.getElementById('currencySelect').addEventListener('change', (e) => {
+            activeCurrency = e.target.value;
+            renderProperties();
+        });
+
+        // ============================================================
+        // 8. INIT
+        // ============================================================
+        applyTranslations();
+        renderProperties();
+
+        window.addEventListener('load', () => {
+            document.querySelectorAll('.reveal').forEach(el => {
+                const rect = el.getBoundingClientRect();
+                if (rect.top < window.innerHeight * 0.85) el.classList.add('is-visible');
+            });
+        });
+    </script>
+
+</body>
+</html>
